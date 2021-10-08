@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ID vs Class</title>
+
+        <style>
+            #d1 {
+                background-color: #ccab12;
+            }
+            .pinkbg {
+                background-color: pink !important;
+            }
+            .cyanbg {
+                background-color: cyan !important;
+            }
+
+            .box {
+                width: 200px;
+                height: 200px;
+                border: 1px solid black;
+                border-radius: 7px;
+                display: inline-block;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="pinkbg box" style="width: 100%; background-color: lightblue !important">
+            ID vs Class
+        </h1>
+        <hr />
+
+        <div class="box" id="d1">div-1</div>
+        <div class="box pinkbg" id="d2">div-2</div>
+        <div class="box cyanbg" id="d3">div-3</div>
+        <div class="box" id="d4">div-4</div>
+        <div class="box pinkbg cyanbg" id="d5">div-5</div>
+    </body>
+</html>

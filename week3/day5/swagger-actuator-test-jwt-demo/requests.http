@@ -1,0 +1,9 @@
+http://localhost:8080/api/employees
+###
+http://localhost:8080/api/employees?email=johndoe@xmpl.com
+###
+http://localhost:8080/api/employees/60de8e0b1b4fff8d458b084f
+###
+http://localhost:8080/api/employees/ASDF
+###
+http://localhost:8080/v2/api-docs

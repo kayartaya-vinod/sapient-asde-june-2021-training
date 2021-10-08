@@ -1,0 +1,10 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/api/vehicles/dealer/feedbacks?page=1"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "../__files/get_dealer_feedback1.json"
+    }
+}

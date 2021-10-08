@@ -1,0 +1,73 @@
+# Parameters
+# PORT -> Port of customer service
+# DB_NAME -> Mongo db name
+# DB_URL -> Mongo db URL
+# DB_PORT -> Mongo db port
+# EUREKA_URL -> URL of eureka service
+# EUREKA_PORT -> Port of eureka service
+# ACTUATOR_PORT -> Port on which actuator should run
+# AUTH_URL -> URL of auth service
+# AUTH_PORT -> Port of auth service
+
+server:
+  port: ${PORT:8098}
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  application:
+    name: vehicle-data-service
+
+  data:
+    mongodb:
+      username: admin
+      password: Welcome#123
+      database: ${DB_NAME:mycarsolution}
+      host: ${DB_URL:54.234.219.42}
+      port: ${DB_PORT:27017}
+      vehicleCollection: ${DB_VEHICLE_COLLECTION:vehicles}
+      dealerCollection: ${DB_DEALER_COLLECTION:dealers}
+      vehicleUploadCollection: ${DB_VEHICLE_UPLOAD_COLLECTION:vehicleUploads}
+
+eureka:
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://${EUREKA_URL:localhost}:${EUREKA_PORT:8761}/eureka/
+  instance:
+    hostname: ${EUREKA_URL:localhost}
+    prefer-ip-address: true
+
+
+
+
+management:
+    metrics:
+        tags:
+            application: vehicle-data-service
+
+    endpoint:
+        health:
+            show-details: always
+
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+            base-path: /api/data/metrics
+
+
+opentracing:
+    jaeger:
+        service-name: Jaeger-VehicleDataService
+        enabled: true
+        udp-sender:
+            host: ${JAEGER_HOST:localhost}
+            port: ${JAEGER_PORT:6831}
+
+authVerifyUrl: http://${AUTH_URL:localhost}:${AUTH_PORT:8095}/api/auth/verify
+mongodbUrl: mongodb://admin:Welcome#123@${DB_URL:54.234.219.42}:${DB_PORT:27017}
+

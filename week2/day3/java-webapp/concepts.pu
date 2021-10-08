@@ -1,0 +1,45 @@
+@startuml
+
+interface Servlet{
+    + init(config:ServletConfig): void
+    + service(req: ServletRequest, resp: ServletResponse): void
+    + destroy():void
+    + getServletInfo(): String
+    + getServletConfig(): ServletConfig
+}
+
+class GenericServlet{
+    + init(config:ServletConfig): void
+    + destroy():void
+    + getServletInfo(): String
+    + getServletConfig(): ServletConfig
+}
+interface Serializable{}
+interface ServletConfig{}
+
+Servlet <|... GenericServlet
+Serializable <|... GenericServlet
+ServletConfig <|... GenericServlet
+
+class HttpServlet{
+    + service(req: ServletRequest, resp: ServletResponse): void
+    # service(req, HttpServletRequest, resp: HttpServletResponse): void
+    # doGet(req, HttpServletRequest, resp: HttpServletResponse): void
+    # doPost(req, HttpServletRequest, resp: HttpServletResponse): void
+    # doPut(req, HttpServletRequest, resp: HttpServletResponse): void
+    # doDelete(req, HttpServletRequest, resp: HttpServletResponse): void
+    # doTrace(req, HttpServletRequest, resp: HttpServletResponse): void
+    # doOptions(req, HttpServletRequest, resp: HttpServletResponse): void
+    # doHead(req, HttpServletRequest, resp: HttpServletResponse): void
+}
+
+GenericServlet <|--- HttpServlet
+
+
+HttpServlet <|--- HelloServlet
+
+class HelloServlet{
+    # doGet(req, HttpServletRequest, resp: HttpServletResponse): void
+    
+}
+@enduml

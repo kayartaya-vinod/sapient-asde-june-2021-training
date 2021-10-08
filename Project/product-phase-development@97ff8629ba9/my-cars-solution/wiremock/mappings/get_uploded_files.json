@@ -1,0 +1,15 @@
+{
+    "request":{
+      "method": "GET",
+      "url": "/api/dealers/my-uploads/d123"
+    },
+    "response":{
+       "status":200,
+        "headers":
+        {
+          "Content-Type": "application/json"
+         
+        },
+        "bodyFileName":"../__files/get_uploded_files.json"
+    }
+}

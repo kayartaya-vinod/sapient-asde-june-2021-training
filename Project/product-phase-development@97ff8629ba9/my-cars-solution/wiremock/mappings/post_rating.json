@@ -1,0 +1,20 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/api/vehicles/vehicle123/rating",
+        "headers": {
+            "Accept": {
+                "contains": "json"
+            }
+        }
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json, text/plain, */*"
+        },
+        "jsonBody": {
+            "success": true
+        }
+    }
+}

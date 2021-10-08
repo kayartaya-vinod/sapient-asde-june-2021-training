@@ -1,0 +1,13 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/api/vehicles/search?q=Honda&page=1"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "../__files/search_vehicles_response.json",
+        "headers":{
+            "content-type": "application/json"
+        }
+    }
+}

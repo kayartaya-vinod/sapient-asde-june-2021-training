@@ -1,0 +1,81 @@
+pipeline {
+    agent any
+
+    environment {
+        ORG_NAME = "sapient"
+        APP_NAME = "vehicle-service"
+        APP_VERSION = "0.0.1-SNAPSHOT"
+        APP_CONTEXT_ROOT = "./micro-services/vehicle-service"
+        APP_LISTENING_PORT = "8097"
+        TEST_CONTAINER_NAME = "ci-${APP_NAME}-${BUILD_NUMBER}"
+    }
+
+    stages{
+
+        stage('compile'){
+            steps {
+                dir("${APP_CONTEXT_ROOT}") {
+                    echo 'compiling...'
+                    bat 'mvn clean compile'
+                }
+            }
+        }
+
+        stage('unit test'){
+            steps {
+                dir("${APP_CONTEXT_ROOT}") {
+                    echo 'unit tests...'
+                    bat 'mvn test'
+                    junit 'target/surefire-reports/*.xml'
+                    jacoco execPattern: 'target/jacoco.exec'
+                }
+            }
+        }
+
+        stage('build'){
+            steps {
+                dir("${APP_CONTEXT_ROOT}") {
+                    echo 'creating jar...'
+                    bat 'mvn package -DskipTests=true'
+                    archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+                }
+            }
+        }
+
+        stage('dockerize'){
+            steps {
+                dir("${APP_CONTEXT_ROOT}") {
+                    echo 'creating docker image...'
+                    bat "docker build -t ${ORG_NAME}/${APP_NAME}:${APP_VERSION} -t ${ORG_NAME}/${APP_NAME}:latest --build-arg APP_NAME=${APP_NAME}-${APP_VERSION}.jar --build-arg PORT=${APP_LISTENING_PORT} ."
+                }
+            }
+        }
+
+        stage('Code inspection & quality gate') {
+           steps {
+                dir("${APP_CONTEXT_ROOT}") {
+                    echo "run code inspection & check quality gate..."
+                    withSonarQubeEnv('ci-sonarqube') {
+                        bat "mvn sonar:sonar"
+                    }
+               }
+               timeout(time: 10, unit: 'MINUTES') {
+                   //waitForQualityGate abortPipeline: true
+                   script  {
+                       sleep 30
+                       def qg = waitForQualityGate()
+                       if (qg.status != 'OK' && qg.status != 'WARN') {
+                           error "Pipeline aborted due to quality gate failure: ${qg.status}"
+                       }
+                   }
+               }
+           }
+       }
+    }
+    post {
+        always {
+            echo "removing the workspace"
+            cleanWs()
+        }
+    }
+}

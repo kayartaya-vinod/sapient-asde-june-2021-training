@@ -1,0 +1,19 @@
+{
+    "folders": [
+		{
+			"path": "gateway-service"
+		},
+		{
+			"path": "product-service"
+		},
+		{
+			"path": "customer-service"
+		},
+		{
+			"path": "eureka-service"
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "automatic"
+	}
+}

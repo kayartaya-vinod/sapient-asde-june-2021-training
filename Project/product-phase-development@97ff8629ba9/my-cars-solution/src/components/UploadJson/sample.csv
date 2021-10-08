@@ -1,0 +1,26 @@
+[
+    {
+        "name": "",
+        "description": "",
+        "pictureUrls": [
+            "URL1",
+            "URL2"
+        ],
+        "price": "",
+        "optionalAdditionalInfo1": "",
+        "optionalAdditionalInfo2": "",
+        "optionalAdditionalInfoN": ""
+    },
+    {
+        "name": "",
+        "description": "",
+        "pictureUrls": [
+            "URL1",
+            "URL2"
+        ],
+        "price": "",
+        "optionalAdditionalInfo1": "",
+        "optionalAdditionalInfo2": "",
+        "optionalAdditionalInfoN": ""
+    }
+]

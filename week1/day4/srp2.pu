@@ -1,0 +1,16 @@
+@startuml
+
+class Employee {
+    - id: int
+    - name: String
+    - salary: double
+
+    + {method} constructor
+    + {method} getters
+    + {method} setters
+    + saveToDatabase(): void
+    + saveAsXml(): void
+    + saveAsJson(): void
+}
+
+@enduml

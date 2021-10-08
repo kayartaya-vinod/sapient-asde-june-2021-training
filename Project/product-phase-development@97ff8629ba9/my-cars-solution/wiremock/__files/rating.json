@@ -1,0 +1,8 @@
+{
+    "_id": "fksjhjhd",
+    "vehicleId": "jyaguyagds4s5d6s45fs",
+    "customerId": "748568erdsgf",
+    "feedback": "This is a nice car",
+    "rating": 4,
+    "pictures": [{ "url": "link", "alt": "altText", "title": "title" }]
+  }

@@ -1,0 +1,14 @@
+@startuml
+
+class Employee {
+    - id: int
+    - name: String
+    - salary: double
+
+    + {method} constructor
+    + {method} getters
+    + {method} setters
+    + save(): void
+}
+
+@enduml

@@ -1,0 +1,278 @@
+[
+  {
+    "name": "brand",
+    "type": "text",
+    "required": true,
+    "nestedDocumet": false
+  },
+  {
+    "name": "description",
+    "type": "text",
+    "required": true,
+    "nestedDocumet": false
+  },
+  {
+    "name": "color",
+    "type": "text",
+    "required": true,
+    "nestedDocumet": false
+  },
+  {
+    "name": "model",
+    "type": "text",
+    "required": true,
+    "nestedDocumet": false
+  },
+  {
+    "name": "year",
+    "type": "number",
+    "required": true,
+    "nestedDocumet": false
+  },
+  {
+    "name": "tankCapacity",
+    "type": "text",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "mediaInterface",
+    "type": "text",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "tripMeter",
+    "type": "text",
+    "required": false,
+    "nestedDocumet": false
+  },
+  { "name": "vin", "type": "text", "required": true, "nestedDocumet": false },
+  {
+    "name": "vehicleType",
+    "type": "text",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "unitsFuelConsumption",
+    "type": "text",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "transmissionGearType",
+    "type": "text",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "steeringWheelType",
+    "type": "text",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "vehicleSpeed",
+    "type": "text",
+    "required": false,
+    "nestedDocumet": false
+  },
+  { "name": "horn", "type": "text", "required": false, "nestedDocumet": false },
+  {
+    "name": "powerTrainTorque",
+    "type": "text",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "accelaration",
+    "type": "text",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "wheelRadius",
+    "type": "text",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "wheelSpeed",
+    "type": "text",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "ignitionTime",
+    "type": "text",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "mirror",
+    "type": "text",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "topSpeedLimit",
+    "type": "text",
+    "required": false,
+    "nestedDocumet": false
+  },
+
+  {
+    "name": "pictureUrls",
+    "type": "text",
+    "required": false,
+    "nestedDocumet": false
+  },
+
+  {
+    "name": "airBagCount",
+    "type": "number",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "price",
+    "type": "number",
+    "required": true,
+    "nestedDocumet": false
+  },
+  {
+    "name": "batteryLevel",
+    "type": "number",
+    "required": false,
+    "nestedDocumet": false
+  },
+
+  {
+    "name": "fuelType",
+    "options": ["diesel", "petrol", "cng", "electric"],
+    "type": "checkbox",
+    "required": false,
+    "nestedDocumet": false
+  },
+
+  {
+    "name": "theftAlarm",
+    "options": ["Yes", "No"],
+    "type": "radio",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "nightMode",
+    "options": ["Yes", "No"],
+    "type": "radio",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "isABS",
+    "options": ["Yes", "No"],
+    "type": "radio",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "fog",
+    "options": ["Yes", "No"],
+    "type": "radio",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "hazard",
+    "options": ["Yes", "No"],
+    "type": "radio",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "parking",
+    "options": ["Yes", "No"],
+    "type": "radio",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "dynamicHighBeam",
+    "options": ["Yes", "No"],
+    "type": "radio",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "automaticHeadlights",
+    "options": ["Yes", "No"],
+    "type": "radio",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "odometer",
+    "options": ["Yes", "No"],
+    "type": "radio",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "washerFluid",
+    "options": ["Yes", "No"],
+    "type": "radio",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "malfunctionIndicator",
+    "options": ["Yes", "No"],
+    "type": "radio",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "childSafetyLock",
+    "options": ["Yes", "No"],
+    "type": "radio",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "airConditioning",
+    "options": ["Yes", "No"],
+    "type": "radio",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "climateControl",
+    "options": ["Yes", "No"],
+    "type": "radio",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "sunroof",
+    "options": ["Yes", "No"],
+    "type": "radio",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "defrost",
+    "options": ["Yes", "No"],
+    "type": "radio",
+    "required": false,
+    "nestedDocumet": false
+  },
+  {
+    "name": "chime",
+    "options": ["Yes", "No"],
+    "type": "radio",
+    "required": false,
+    "nestedDocumet": false
+  }
+]

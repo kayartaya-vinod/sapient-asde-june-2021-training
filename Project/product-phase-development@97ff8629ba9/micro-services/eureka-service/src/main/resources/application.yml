@@ -1,0 +1,17 @@
+eureka:
+    client:
+        register-with-eureka: false
+        fetch-registry: false
+server:
+    port: 8761
+spring:
+    application:
+        name: EUREKA-SERVER
+
+opentracing:
+    jaeger:
+        service-name: Jaeger-EurekaService
+        enabled: true
+        udp-sender:
+            host: ${JAEGER_HOST:localhost}
+            port: ${JAEGER_PORT:6831}

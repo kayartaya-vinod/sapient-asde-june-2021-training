@@ -1,0 +1,12 @@
+@startuml
+
+class Person {
+    -name: String
+    -email: String
+    {method} +constructor
+    {method} +getters
+    {method} +setters
+    +log(): void
+}
+
+@enduml

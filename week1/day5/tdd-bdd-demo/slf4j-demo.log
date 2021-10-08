@@ -1,0 +1,9 @@
+[Fri Jun 18, 2021 09:59:30,755 AM] [main           ] com.sapient.CalculatorTest setup() called
+[Fri Jun 18, 2021 09:59:30,756 AM] [main           ] com.sapient.CalculatorTest testSumOfOneNumber() called
+[Fri Jun 18, 2021 09:59:30,757 AM] [main           ] com.sapient.CalculatorTest tearDown() called
+[Fri Jun 18, 2021 09:59:30,759 AM] [main           ] com.sapient.CalculatorTest setup() called
+[Fri Jun 18, 2021 09:59:30,759 AM] [main           ] com.sapient.CalculatorTest testSumOfZeroNumbers() called
+[Fri Jun 18, 2021 09:59:30,760 AM] [main           ] com.sapient.CalculatorTest tearDown() called
+[Fri Jun 18, 2021 09:59:30,760 AM] [main           ] com.sapient.CalculatorTest setup() called
+[Fri Jun 18, 2021 09:59:30,761 AM] [main           ] com.sapient.CalculatorTest testSumOfTwoNumbers() called
+[Fri Jun 18, 2021 09:59:30,761 AM] [main           ] com.sapient.CalculatorTest tearDown() called

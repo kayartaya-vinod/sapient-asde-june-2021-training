@@ -1,0 +1,12 @@
+.custom-header {
+  margin-bottom: 8rem;
+}
+.navbar-brand {
+  cursor: pointer;
+}
+
+.navbar-nav-items *{
+  font-size: 1rem;
+}
+
+ 

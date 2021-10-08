@@ -1,0 +1,10 @@
+{
+    "request": {
+        "method": "PUT",
+        "url": "/api/customers/favorites/6108bbfeda1166446cf87858"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "../__files/add_remove_fav.json"
+    }
+}

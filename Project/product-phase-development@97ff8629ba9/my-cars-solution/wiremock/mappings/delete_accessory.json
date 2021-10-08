@@ -1,0 +1,9 @@
+{
+    "request": {
+        "method": "DELETE",
+        "urlPattern": "/api/vehicles/dealer/delete-accessory\\?id=([a-zA-Z0-9]+)"
+    },
+    "response": {
+        "status": 204
+    }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "name",
+    "type": "text",
+    "required": true
+  },
+  {
+    "name": "description",
+    "type": "text",
+    "required": true
+  },
+  {
+    "name": "price",
+    "type": "number",
+    "required": true
+  },
+  {
+    "name": "pictureUrls",
+    "type": "text",
+    "required": false
+  }
+]

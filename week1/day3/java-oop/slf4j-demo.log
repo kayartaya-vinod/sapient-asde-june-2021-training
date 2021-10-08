@@ -1,0 +1,99 @@
+[Wed Jun 16, 2021 10:14:51,658 AM] [main           ] com.sapient.programs.App Hello, World! from Vinod
+[Wed Jun 16, 2021 10:14:51,659 AM] [main           ] com.sapient.programs.App Hello, World! from Vinod
+[Wed Jun 16, 2021 10:14:51,659 AM] [main           ] com.sapient.programs.App Hello, World! from Vinod
+[Wed Jun 16, 2021 10:14:51,660 AM] [main           ] com.sapient.programs.App Hello, World! from Vinod
+[Wed Jun 16, 2021 10:14:51,660 AM] [main           ] com.sapient.programs.App Hello, World! from Vinod
+[Wed Jun 16, 2021 10:17:27,561 AM] [main           ] com.sapient.programs.App Hello, World! from Vinod
+[Wed Jun 16, 2021 10:17:27,563 AM] [main           ] com.sapient.programs.App Hello, World! from Vinod
+[Wed Jun 16, 2021 10:17:27,563 AM] [main           ] com.sapient.programs.App Hello, World! from Vinod
+[Wed Jun 16, 2021 10:17:27,564 AM] [main           ] com.sapient.programs.App Hello, World! from Vinod
+[Wed Jun 16, 2021 10:17:27,564 AM] [main           ] com.sapient.programs.App Hello, World! from Vinod
+[Wed Jun 16, 2021 11:17:55,587 AM] [main           ] com.sapient.programs.CircleApp Start of CircleApp.main()
+[Wed Jun 16, 2021 11:17:55,594 AM] [main           ] com.sapient.programs.CircleApp Are of circle with radius 4.5 is 63.61725123519331
+[Wed Jun 16, 2021 11:17:55,594 AM] [main           ] com.sapient.programs.CircleApp End of CircleApp.main()
+[Wed Jun 16, 2021 11:19:16,172 AM] [main           ] com.sapient.programs.CircleApp Start of CircleApp.main()
+[Wed Jun 16, 2021 11:19:16,177 AM] [main           ] com.sapient.programs.CircleApp Are of circle with radius -4.5 is 63.61725123519331
+[Wed Jun 16, 2021 11:19:16,177 AM] [main           ] com.sapient.programs.CircleApp End of CircleApp.main()
+[Wed Jun 16, 2021 11:25:50,446 AM] [main           ] com.sapient.programs.CircleApp Start of CircleApp.main()
+[Wed Jun 16, 2021 11:39:19,796 AM] [main           ] com.sapient.programs.CircleApp Start of CircleApp.main()
+[Wed Jun 16, 2021 11:39:43,821 AM] [main           ] com.sapient.programs.CircleApp Start of CircleApp.main()
+[Wed Jun 16, 2021 11:39:43,826 AM] [main           ] com.sapient.programs.CircleApp Area of circle with radius 4.5 is 63.61725123519331
+[Wed Jun 16, 2021 11:39:43,827 AM] [main           ] com.sapient.programs.CircleApp End of CircleApp.main()
+[Wed Jun 16, 2021 12:38:05,812 PM] [main           ] com.sapient.entity.PersonDemo Name = Vinod
+[Wed Jun 16, 2021 12:38:05,814 PM] [main           ] com.sapient.entity.PersonDemo Email = vinod@vinod.co
+[Wed Jun 16, 2021 12:43:58,584 PM] [main           ] com.sapient.entity.Person Name = Vinod, Email = vinod@vinod.co
+[Wed Jun 16, 2021 12:47:26,859 PM] [main           ] com.sapient.entity.Person Name = Vinod, Email = vinod@vinod.co
+[Wed Jun 16, 2021 12:47:26,861 PM] [main           ] com.sapient.entity.Person Name = Kumar, Email = kumar@xmpl.com
+[Wed Jun 16, 2021 12:48:19,908 PM] [main           ] com.sapient.entity.Person Name = Vinod, Email = vinod@vinod.co
+[Wed Jun 16, 2021 12:48:19,909 PM] [main           ] com.sapient.entity.Person Name = Kumar, Email = kumar@xmpl.com
+[Wed Jun 16, 2021 12:48:19,910 PM] [main           ] com.sapient.programs.InheritanceDemo p1 = Person(name=Vinod, email=vinod@vinod.co)
+[Wed Jun 16, 2021 12:48:19,910 PM] [main           ] com.sapient.programs.InheritanceDemo s1 = Person(name=Kumar, email=kumar@xmpl.com)
+[Wed Jun 16, 2021 12:51:22,207 PM] [main           ] com.sapient.entity.Person Name = Vinod, Email = vinod@vinod.co
+[Wed Jun 16, 2021 12:51:22,208 PM] [main           ] com.sapient.entity.Person Name = Kumar, Email = kumar@xmpl.com
+[Wed Jun 16, 2021 12:51:22,209 PM] [main           ] com.sapient.programs.InheritanceDemo p1 = Person(name=Vinod, email=vinod@vinod.co)
+[Wed Jun 16, 2021 12:51:22,212 PM] [main           ] com.sapient.programs.InheritanceDemo s1 = Student(rollno=1234, major=Physics, gpa=3.8)
+[Wed Jun 16, 2021 12:53:24,787 PM] [main           ] com.sapient.entity.Person Name = Vinod, Email = vinod@vinod.co
+[Wed Jun 16, 2021 12:53:24,788 PM] [main           ] com.sapient.entity.Person Name = Kumar, Email = kumar@xmpl.com
+[Wed Jun 16, 2021 12:53:24,789 PM] [main           ] com.sapient.programs.InheritanceDemo p1 = Person(name=Vinod, email=vinod@vinod.co)
+[Wed Jun 16, 2021 12:53:24,789 PM] [main           ] com.sapient.programs.InheritanceDemo s1 = Person(name=Kumar, email=kumar@xmpl.com)
+[Wed Jun 16, 2021 12:55:34,948 PM] [main           ] com.sapient.entity.Person Name = Vinod, Email = vinod@vinod.co
+[Wed Jun 16, 2021 12:55:34,949 PM] [main           ] com.sapient.entity.Person Name = Kumar, Email = kumar@xmpl.com
+[Wed Jun 16, 2021 12:55:34,950 PM] [main           ] com.sapient.programs.InheritanceDemo p1 = Person(name=Vinod, email=vinod@vinod.co)
+[Wed Jun 16, 2021 12:55:34,953 PM] [main           ] com.sapient.programs.InheritanceDemo s1 = Student [Person(name=Kumar, email=kumar@xmpl.com), gpa=3.8, major=Physics, rollno=1234]
+[Wed Jun 16, 2021 03:53:32,505 PM] [main           ] com.sapient.entity.Animal I am an Animal
+[Wed Jun 16, 2021 04:01:21,537 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:01:21,540 PM] [main           ] com.sapient.entity.Cat I am an Cat
+[Wed Jun 16, 2021 04:01:21,540 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:01:21,540 PM] [main           ] com.sapient.entity.Dog I am an Dog
+[Wed Jun 16, 2021 04:01:21,540 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:03:44,154 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:03:44,155 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:03:44,155 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:03:44,156 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:07:17,216 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:07:17,218 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:07:17,221 PM] [main           ] com.sapient.entity.Cat I am an Cat
+[Wed Jun 16, 2021 04:07:17,221 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:17:28,065 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:17:28,066 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:17:28,067 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:17:28,067 PM] [main           ] com.sapient.entity.Cat I am an Cat
+[Wed Jun 16, 2021 04:17:28,067 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:17:28,068 PM] [main           ] com.sapient.entity.Dog I am an Dog
+[Wed Jun 16, 2021 04:18:20,400 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:18:20,402 PM] [main           ] com.sapient.entity.Animal I am an animal
+[Wed Jun 16, 2021 04:18:20,402 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:18:20,403 PM] [main           ] com.sapient.entity.Cat I am an Cat
+[Wed Jun 16, 2021 04:18:20,403 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:18:20,404 PM] [main           ] com.sapient.entity.Dog I am an Dog
+[Wed Jun 16, 2021 04:20:10,066 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:20:10,068 PM] [main           ] com.sapient.entity.Animal I am an animal
+[Wed Jun 16, 2021 04:20:10,068 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:20:10,068 PM] [main           ] com.sapient.entity.Cat I am an Cat
+[Wed Jun 16, 2021 04:20:10,069 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:20:10,070 PM] [main           ] com.sapient.entity.Dog I am an Dog
+[Wed Jun 16, 2021 04:26:27,346 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:26:27,348 PM] [main           ] com.sapient.entity.Cat I am a Cat
+[Wed Jun 16, 2021 04:26:27,348 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:26:27,348 PM] [main           ] com.sapient.entity.Dog I am a Dog
+[Wed Jun 16, 2021 04:35:27,728 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:35:27,730 PM] [main           ] com.sapient.entity.Cat I' am a nice cat!
+[Wed Jun 16, 2021 04:35:27,730 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:35:27,731 PM] [main           ] com.sapient.entity.Dog I am a Dog
+[Wed Jun 16, 2021 04:40:39,485 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:40:39,486 PM] [main           ] com.sapient.entity.Cat I' am a nice cat!
+[Wed Jun 16, 2021 04:40:39,486 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:40:39,487 PM] [main           ] com.sapient.entity.Dog I am a Dog
+[Wed Jun 16, 2021 04:40:39,487 PM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Wed Jun 16, 2021 04:40:39,488 PM] [main           ] com.sapient.entity.Lion I am a lion
+[Wed Jun 16, 2021 05:08:41,716 PM] [main           ] com.sapient.programs.InterfaceDemo Area of triangle = 204.0
+[Wed Jun 16, 2021 05:08:41,720 PM] [main           ] com.sapient.programs.InterfaceDemo Area of triangle = 816.0
+[Wed Jun 16, 2021 05:08:54,270 PM] [main           ] com.sapient.programs.InterfaceDemo Area of triangle = 204.0
+[Wed Jun 16, 2021 05:08:54,272 PM] [main           ] com.sapient.programs.InterfaceDemo Area of rectangle = 816.0
+[Fri Jun 18, 2021 09:13:47,520 AM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Fri Jun 18, 2021 09:13:47,522 AM] [main           ] com.sapient.entity.Cat I' am a nice cat!
+[Fri Jun 18, 2021 09:13:47,523 AM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Fri Jun 18, 2021 09:13:47,523 AM] [main           ] com.sapient.entity.Dog I am a Dog
+[Fri Jun 18, 2021 09:13:47,524 AM] [main           ] com.sapient.entity.Animal Author name = Vinod, email = vinod@vinod.co
+[Fri Jun 18, 2021 09:13:47,524 AM] [main           ] com.sapient.entity.Lion I am a lion
+[Fri Jun 18, 2021 09:13:47,524 AM] [main           ] com.sapient.entity.Cat I' am a nice cat!

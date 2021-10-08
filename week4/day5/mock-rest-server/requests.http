@@ -1,0 +1,42 @@
+http://localhost:8080/contacts?_page=2
+###
+http://localhost:8080/contacts/134
+###
+http://localhost:8080/contacts/2
+###
+POST /contacts
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "johndoe@xmpl.com",
+    "phone": "9878765454"
+}
+
+###
+PATCH /contacts/1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "email": "vinod@kwit.com"
+}
+
+###
+http://localhost:8080/products
+
+###
+
+PUT /contacts/134
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "id": 134,
+  "name": "Natassia Bourton",
+  "gender": "F",
+  "email": "nbourton3p@huffingtonpost.com",
+  "phone": "4094585233",
+  "city": "Brumadinho"
+}

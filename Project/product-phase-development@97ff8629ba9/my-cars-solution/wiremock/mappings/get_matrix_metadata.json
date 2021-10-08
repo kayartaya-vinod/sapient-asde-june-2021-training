@@ -1,0 +1,39 @@
+{
+    "request":{
+        "method": "GET",
+        "url":"/api/vehicles/matrix-metadata"
+    },
+    "response": {
+        "status": 201,
+	"headers":
+        {
+        "Content-Type" : "application/json"
+        },
+        "jsonBody": {
+                "data": [   
+                      {
+                          "id": "hjasghdakjshdk",
+                          "userId": "hgfhzgvcx65c4xc",
+                          "vehicleIds": [ "id1", "id2" , "id3" ],
+                          "comparisonMatrixName": "SUVs",
+                          "createdDate": "3/6/2020"
+                      },
+                      {
+                          "id": "hjasghdakjsdkj",
+                          "userId": "hgfhzgvcx65c4xc",
+                          "vehicleIds": [ "id1", "id2"  ],
+                          "comparisonMatrixName": "Sedans",
+                          "createdDate": "4/8/2021"
+                      },
+                      {
+                          "id": "hjasghdakjshkj",
+                          "userId": "hgfhzgvcx65c4xc",
+                          "vehicleIds": [ "id1", "id2"  ],
+                          "comparisonMatrixName": "Hatchbacks",
+                          "createdDate": "14/7/2021"
+                      }
+        ]}
+    }
+}
+
+

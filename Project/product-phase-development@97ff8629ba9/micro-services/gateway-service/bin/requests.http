@@ -1,0 +1,12 @@
+http://localhost:8300/api/products/info
+
+###
+http://localhost:8200/api/customers/info
+
+###
+
+http://localhost/api/products/info
+
+###
+http://localhost/api/customers/info
+

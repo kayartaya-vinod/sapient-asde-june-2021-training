@@ -1,0 +1,7 @@
+export const FETCH_CONTACTS = 'FETCH_CONTACTS';
+export const ADD_NEW_CONTACT = 'ADD_NEW_CONTACT';
+export const DELETE_CONTACT = 'DELETE_CONTACT';
+export const FETCH_CONTACT_BY_ID = 'FETCH_CONTACT_BY_ID';
+export const UPDATE_CONTACT = 'UPDATE_CONTACT';
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGOUT = 'LOGOUT';

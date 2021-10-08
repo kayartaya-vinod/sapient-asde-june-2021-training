@@ -1,0 +1,21 @@
+# FROM node:alpine
+# WORKDIR /app
+# ENV PATH /app/node_modules/.bin:$PATH
+# COPY package.json ./
+# COPY package-lock.json ./
+# RUN npm i
+# COPY . ./
+# EXPOSE 3000
+# CMD ["npm", "start"]
+
+## nginx
+FROM nginx:alpine
+RUN apk add --no-cache gettext
+COPY nginx-entrypoint.sh /
+COPY ./build /usr/share/nginx/html
+COPY inject.template.js /usr/share/nginx/html
+RUN rm /etc/nginx/conf.d/default.conf
+COPY ./nginx /etc/nginx/conf.d
+EXPOSE 80
+# ENTRYPOINT [ "nginx", "-g", "daemon off;"] 
+ENTRYPOINT [ "sh", "./nginx-entrypoint.sh" ]

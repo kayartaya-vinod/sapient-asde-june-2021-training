@@ -1,0 +1,100 @@
+pipeline {
+    agent any
+
+    environment {
+        ORG_NAME = "sapient"
+        APP_NAME = "vehicle-service"
+        APP_VERSION = "0.0.1-SNAPSHOT"
+        APP_CONTEXT_ROOT = "./micro-services/vehicle-service"
+        APP_LISTENING_PORT = "8097"
+        TEST_CONTAINER_NAME = "ci-${APP_NAME}-${BUILD_NUMBER}"
+        SPRINT_RELEASE_NUM = "4"
+    }
+
+
+    tools {
+            maven "MAVEN"
+            dockerTool "DOCKER"
+        }
+
+
+    stages{
+
+        stage('compile'){
+            steps {
+                dir("${APP_CONTEXT_ROOT}") {
+                    echo 'compiling...'
+                    sh 'mvn clean compile'
+                }
+            }
+        }
+
+        stage('unit test'){
+            steps {
+                dir("${APP_CONTEXT_ROOT}") {
+                    echo 'unit tests...'
+                    sh 'mvn test'
+                    junit 'target/surefire-reports/*.xml'
+                    jacoco execPattern: 'target/jacoco.exec'
+                }
+            }
+        }
+
+        stage('build'){
+            steps {
+                dir("${APP_CONTEXT_ROOT}") {
+                    echo 'creating jar...'
+                    sh 'mvn package -DskipTests=true'
+                    archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+                   
+                }
+            }
+        }
+
+    
+
+       stage('Code inspection & quality gate') {
+           steps {
+                dir("${APP_CONTEXT_ROOT}") {
+                    echo "run code inspection & check quality gate..."
+                    withSonarQubeEnv('ci-sonarqube') {
+                        sh "mvn sonar:sonar"
+                    }
+               }
+               timeout(time: 10, unit: 'MINUTES') {
+                   //waitForQualityGate abortPipeline: true
+                   script  {
+                       def qg = waitForQualityGate()
+                       if (qg.status != 'OK' && qg.status != 'WARN') {
+                           error "Pipeline aborted due to quality gate failure: ${qg.status}"
+                       }
+                   }
+               }
+           }
+       }
+
+        stage('image - create and push-ecr') {
+            steps {
+                sh "echo pushing image to ecr..."
+                script {
+                    dir("${APP_CONTEXT_ROOT}") {
+                        def build = docker.build("153294646920.dkr.ecr.us-east-1.amazonaws.com/vehicle-service:${SPRINT_RELEASE_NUM}.0.${BUILD_NUMBER}", ".")
+                    }
+                    withDockerRegistry(credentialsId: 'ecr:us-east-1:Deepthi_ECR_Creds', toolName: 'DOCKER',
+                    url: 'https://153294646920.dkr.ecr.us-east-1.amazonaws.com/vehicle-service') {
+                    docker.image("153294646920.dkr.ecr.us-east-1.amazonaws.com/vehicle-service:${SPRINT_RELEASE_NUM}.0.${BUILD_NUMBER}").push()
+                    docker.image("153294646920.dkr.ecr.us-east-1.amazonaws.com/vehicle-service:${SPRINT_RELEASE_NUM}.0.${BUILD_NUMBER}").push('latest')
+                    }
+                }
+            }
+        }
+    }
+    post {
+        always {
+            // echo "removing docker test container..."
+            // sh "docker stop ${TEST_CONTAINER_NAME}"
+            echo "removing the workspace"
+            cleanWs()
+        }
+    }
+}

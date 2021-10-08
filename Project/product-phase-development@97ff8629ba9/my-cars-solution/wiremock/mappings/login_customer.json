@@ -1,0 +1,27 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPattern": "/api/auth/login/",
+    "bodyPatterns": [
+      {
+        "equalToJson": {
+          "email": "customer@domain.com",
+          "password": "password"
+        }
+      }
+    ]
+  },
+  "response": {
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "status": 200,
+    "jsonBody": {
+      "id": "123",
+      "name": "Abhishek",
+      "email": "customer@domain.com",
+      "token": "token",
+      "userType": "customer"
+    }
+  }
+}

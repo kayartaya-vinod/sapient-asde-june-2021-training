@@ -1,0 +1,36 @@
+http://localhost:8098/api/vehicles/upload
+###
+POST /api/data/upload/csv
+Host: localhost:8098
+Authorization: jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJHbGVuZGEiLCJ1c2VyVHlwZSI6ImRlYWxlciIsImV4cCI6MTYyOTA5ODI3NywidXNlcklkIjoiNjExNjYzMDA5ZTJmMzYxMjkzNGE4OTIyIiwiaWF0IjoxNjI5MDExODc3LCJlbWFpbCI6ImdsZW5kYXBhdHRvbkBxbmVrdC5jb20ifQ.kEZ6X7hzBTyL2i02tY06OlGXHbIPj4IGdRWFIeYIvwA
+###
+GET /api/data/download/csv/all
+Host: localhost:8098
+Authorization: jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJHbGVuZGEiLCJ1c2VyVHlwZSI6IkRlYWxlciIsImV4cCI6MTYyOTA1MDE0NSwidXNlcklkIjoiNjExNjYzMDA5ZTJmMzYxMjkzNGE4OTIyIiwiaWF0IjoxNjI4OTYzNzQ1LCJlbWFpbCI6ImdsZW5kYXBhdHRvbkBxbmVrdC5jb20ifQ.R4NEDJT3ZNPJ3Tyw38XUYo79NNch-HLgKfP0i2waqO8
+###
+GET /api/data/download/csv?ids=6118c1f1ab3d2c309c111808
+Host: localhost:8098
+Authorization: jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJHbGVuZGEiLCJ1c2VyVHlwZSI6ImRlYWxlciIsImV4cCI6MTYyOTA5ODI3NywidXNlcklkIjoiNjExNjYzMDA5ZTJmMzYxMjkzNGE4OTIyIiwiaWF0IjoxNjI5MDExODc3LCJlbWFpbCI6ImdsZW5kYXBhdHRvbkBxbmVrdC5jb20ifQ.kEZ6X7hzBTyL2i02tY06OlGXHbIPj4IGdRWFIeYIvwA
+###
+http://localhost:8098/api/download/csv?ids=6118c1f1ab3d2c309c111808
+
+###
+http://localhost:8098/api/download/csv/all
+
+
+###
+
+POST /api/auth/login
+Host: localhost:8095
+Content-Type: application/json
+
+{
+    "email": "user2@gmail.com",
+    "password":"password"
+}
+
+// Sanchit Mahto
+###
+GET /api/data/my-uploads/6124967d638c3a9270f76b13
+Host: localhost:8400
+Authorization: jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJ1c2VyMiIsInVzZXJUeXBlIjoiRGVhbGVyIiwiZXhwIjoxNjMwMTMwNTQxLCJ1c2VySWQiOiI2MTI0OTY3ZDYzOGMzYTkyNzBmNzZiMTMiLCJpYXQiOjE2MzAwNDQxNDEsImVtYWlsIjoidXNlcjJAZ21haWwuY29tIn0.kC3Na7MOOPeL1WU43wsekkm5QbEYpa17cg6rjNk5kEM

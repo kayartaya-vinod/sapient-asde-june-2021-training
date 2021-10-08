@@ -1,0 +1,20 @@
+@startuml
+
+skinparam style strictuml
+actor client
+
+client -> HelloServlet: HTTP request
+
+HelloServlet -> HelloService: service.getMessage()
+
+HelloService -> HelloDao: dao.getUserName()
+HelloService <- HelloDao: "Vinod"
+HelloService -> HelloDao: dao.getGreeting()
+HelloService <- HelloDao: "Hello"
+
+
+HelloServlet <- HelloService: "Hello, Vinod"
+
+client <- HelloServlet: HTTP response
+
+@enduml

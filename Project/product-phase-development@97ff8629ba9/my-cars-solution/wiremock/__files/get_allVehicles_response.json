@@ -1,0 +1,271 @@
+{
+  "message" :[
+    {
+      "id": "aksdsdad45da5a1sd2",
+      "brand": "Daewoo",
+      "vehicleType": "SUV",
+      "year": 2001,
+      "model": "Nubira",
+      "picturesUrl": [
+        "http://dummyimage.com/241x100.png/dddddd/000000",
+        "http://dummyimage.com/114x100.png/dddddd/000000",
+        "http://dummyimage.com/241x100.png/dddddd/000000"
+      ],
+      "color": "Purple",
+      "price": "$6565.01"
+    },
+    {
+      "id": "aksdsdad45da5a1sd2",
+      "brand": "Mitsubishi",
+      "vehicleType": "Sedan",
+      "year": 1992,
+      "model": "3000GT",
+      "picturesUrl": [
+        "http://dummyimage.com/169x100.png/ff4444/ffffff",
+        "http://dummyimage.com/241x100.png/dddddd/000000"
+      ],
+      "color": "Yellow",
+      "price": "$4831.72"
+    },
+    {
+      "id": "aksdsdad45da5a1sd2",
+      "brand": "Hyundai",
+      "vehicleType": "Hatchback",
+      "year": 2013,
+      "model": "Equus",
+      "picturesUrl": [
+        "http://dummyimage.com/105x100.png/5fa2dd/ffffff",
+        "http://dummyimage.com/114x100.png/dddddd/000000",
+        "http://dummyimage.com/241x100.png/dddddd/000000"
+      ],
+      "color": "Aquamarine",
+      "price": "$5277.04"
+    },
+    {
+      "id": "aksdsdad45da5a1sd2",
+      "brand": "Acura",
+      "vehicleType": "MUV",
+      "year": 1997,
+      "model": "Integra",
+      "picturesUrl": [
+        "http://dummyimage.com/194x100.png/ff4444/ffffff",
+        "http://dummyimage.com/241x100.png/dddddd/000000"
+      ],
+      "color": "Teal",
+      "price": "$9319.74"
+    },
+    {
+      "id": "aksdsdad45da5a1sd2",
+      "brand": "Cadillac",
+      "vehicleType": "SUV",
+      "year": 2009,
+      "model": "CTS",
+      "picturesUrl": [
+        "http://dummyimage.com/199x100.png/dddddd/000000",
+        "http://dummyimage.com/114x100.png/dddddd/000000",
+        "http://dummyimage.com/241x100.png/dddddd/000000"
+      ],
+      "color": "Mauv",
+      "price": "$3278.70"
+    },
+    {
+      "id": "aksdsdad45da5a1sd2",
+      "brand": "Mitsubishi",
+      "vehicleType": "Hatchback",
+      "year": 2002,
+      "model": "Lancer",
+      "picturesUrl": [
+        "http://dummyimage.com/115x100.png/5fa2dd/ffffff",
+        "http://dummyimage.com/241x100.png/dddddd/000000"
+      ],
+      "color": "Indigo",
+      "price": "$6513.05"
+    },
+    {
+      "id": "aksdsdad45da5a1sd2",
+      "brand": "Dodge",
+      "vehicleType": "MUV",
+      "year": 2008,
+      "model": "Challenger",
+      "picturesUrl": [
+        "http://dummyimage.com/114x100.png/dddddd/000000",
+        "http://dummyimage.com/114x100.png/dddddd/000000",
+        "http://dummyimage.com/241x100.png/dddddd/000000"
+      ],
+      "color": "Yellow",
+      "price": "$8753.09"
+    },
+    {
+      "id": "aksdsdad45da5a1sd2",
+      "brand": "Hyundai",
+      "vehicleType": "Toyota",
+      "year": 1998,
+      "model": "Tiburon",
+      "picturesUrl": [
+        "http://dummyimage.com/118x100.png/cc0000/ffffff",
+        "http://dummyimage.com/241x100.png/dddddd/000000"
+      ],
+      "color": "Indigo",
+      "price": "$3819.30"
+    },
+    {
+      "id": "aksdsdad45da5a1sd2",
+      "brand": "Fiat",
+      "vehicleType": "SUV",
+      "year": 2012,
+      "model": "500",
+      "picturesUrl": [
+        "http://dummyimage.com/137x100.png/cc0000/ffffff",
+        "http://dummyimage.com/114x100.png/dddddd/000000"
+      ],
+      "color": "Goldenrod",
+      "price": "$5011.14"
+    },
+    {
+      "id": "aksdsdad45da5a1sd2",
+      "brand": "GMC",
+      "vehicleType": "BMW",
+      "year": 2007,
+      "model": "Sierra 1500",
+      "picturesUrl": [
+        "http://dummyimage.com/196x100.png/5fa2dd/ffffff",
+        "http://dummyimage.com/241x100.png/dddddd/000000"
+      ],
+      "color": "Crimson",
+      "price": "$6402.72"
+    },
+    {
+      "id": "aksdsdad45da5a1sd2",
+      "brand": "Mitsubishi",
+      "vehicleType": "Sedan",
+      "year": 1994,
+      "model": "Pajero",
+      "picturesUrl": [
+        "http://dummyimage.com/184x100.png/5fa2dd/ffffff",
+        "http://dummyimage.com/241x100.png/dddddd/000000"
+      ],
+      "color": "Purple",
+      "price": "$8101.15"
+    },
+    {
+      "id": "aksdsdad45da5a1sd2",
+      "brand": "Infiniti",
+      "vehicleType": "Ford",
+      "year": 2002,
+      "model": "Q",
+      "picturesUrl": [
+        "http://dummyimage.com/143x100.png/cc0000/ffffff",
+        "http://dummyimage.com/241x100.png/dddddd/000000"
+      ],
+      "color": "Maroon",
+      "price": "$3111.84"
+    },
+    {
+      "id": "aksdsdad45da5a1sd2",
+      "brand": "Mitsubishi",
+      "vehicleType": "Hatchback",
+      "year": 1986,
+      "model": "Tredia",
+      "picturesUrl": [
+        "http://dummyimage.com/103x100.png/ff4444/ffffff",
+        "http://dummyimage.com/241x100.png/dddddd/000000"
+      ],
+      "color": "Pink",
+      "price": "$3858.92"
+    },
+    {
+      "id": "aksdsdad45da5a1sd2",
+      "brand": "Pontiac",
+      "vehicleType": "MUV",
+      "year": 1984,
+      "model": "Sunbird",
+      "picturesUrl": [
+        "http://dummyimage.com/179x100.png/cc0000/ffffff",
+        "http://dummyimage.com/241x100.png/dddddd/000000"
+      ],
+      "color": "Puce",
+      "price": "$2653.98"
+    },
+    {
+      "id": "aksdsdad45da5a1sd2",
+      "brand": "Volvo",
+      "vehicleType": "Volvo",
+      "year": 2007,
+      "model": "XC90",
+      "picturesUrl": [
+        "http://dummyimage.com/144x100.png/cc0000/ffffff",
+        "http://dummyimage.com/241x100.png/dddddd/000000"
+      ],
+      "color": "Indigo",
+      "price": "$3344.40"
+    },
+    {
+      "id": "aksdsdad45da5a1sd2",
+      "brand": "Chrysler",
+      "vehicleType": "Hatchback",
+      "year": 1992,
+      "model": "Fifth Ave",
+      "picturesUrl": [
+        "http://dummyimage.com/218x100.png/5fa2dd/ffffff",
+        "http://dummyimage.com/241x100.png/dddddd/000000"
+      ],
+      "color": "Blue",
+      "price": "$3879.95"
+    },
+    {
+      "id": "aksdsdad45da5a1sd2",
+      "brand": "Ford",
+      "vehicleType": "SUV",
+      "year": 1972,
+      "model": "Mustang",
+      "picturesUrl": [
+        "http://dummyimage.com/111x100.png/cc0000/ffffff",
+        "http://dummyimage.com/241x100.png/dddddd/000000"
+      ],
+      "color": "Puce",
+      "price": "$7165.20"
+    },
+    {
+      "id": "aksdsdad45da5a1sd2",
+      "brand": "GMC",
+      "vehicleType": "MUV",
+      "year": 1992,
+      "model": "Rally Wagon 3500",
+      "picturesUrl": [
+        "http://dummyimage.com/118x100.png/cc0000/ffffff",
+        "http://dummyimage.com/241x100.png/dddddd/000000"
+      ],
+      "color": "Turquoise",
+      "price": "$2326.46"
+    },
+    {
+      "id": "aksdsdad45da5a1sd2",
+      "brand": "Ford",
+      "vehicleType": "GMC",
+      "year": 2003,
+      "model": "Thunderbird",
+      "picturesUrl": [
+        "http://dummyimage.com/199x100.png/dddddd/000000",
+        "http://dummyimage.com/114x100.png/dddddd/000000",
+        "http://dummyimage.com/241x100.png/dddddd/000000"
+      ],
+      "color": "Mauv",
+      "price": "$2418.59"
+    },
+    {
+      "id": "aksdsdad45da5a1sd2",
+      "brand": "Cadillac",
+      "vehicleType": "SUV",
+      "year": 2005,
+      "model": "Escalade ESV",
+      "picturesUrl": [
+        "http://dummyimage.com/148x100.png/5fa2dd/ffffff",
+        "http://dummyimage.com/114x100.png/dddddd/000000",
+        "http://dummyimage.com/241x100.png/dddddd/000000"
+      ],
+      "color": "Aquamarine",
+      "price": "$7659.16"
+    }
+  ]
+
+}

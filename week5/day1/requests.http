@@ -1,0 +1,48 @@
+GET /api/contacts/60e67364195274776c316c25
+Host: localhost:8080
+
+###
+GET /api/contacts
+Host: localhost:8080
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjYwMjMwNTksInVzZXJJZCI6IjYwZWIwOTAwODllYzg0YTI5ZjMyYzNiOSIsImlhdCI6MTYyNjAyMjE1OX0.YsAsLcBiMOXcQoMBrK_wH3dKZpWb0okqJ4sK8NRpEyc
+###
+GET /api/contacts
+Host: localhost:8080
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjYwMjMwNDgsInVzZXJJZCI6IjYwZWIwOTEzODllYzg0YTI5ZjMyYzNiYSIsImlhdCI6MTYyNjAyMjE0OH0.ITtxzDIYvnjPPTWfDTQuIqG4-xp1Qu8A33epnBN6-sY
+###
+
+POST /api/auth/login
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "email": "vinod@vinod.co",
+    "password": "topsecret"
+}
+###
+
+POST /api/auth/login
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "email": "shyam@exmpl.com",
+    "password": "topsecret"
+}
+
+###
+
+POST /api/auth/login
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "email": "john@exmpl.com",
+    "password": "topsecret"
+}
+
+###
+
+GET /api/contacts
+Host: localhost:8080
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjYwNjI4NjQsInVzZXJJZCI6IjYwZWIwOTEzODllYzg0YTI5ZjMyYzNiYSIsImlhdCI6MTYyNjA2MTk2NH0.3OqYONLIGFCEDIpbf71shymJddtrk002JYa1gEQaxqU

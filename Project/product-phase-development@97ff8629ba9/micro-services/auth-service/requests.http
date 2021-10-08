@@ -1,0 +1,182 @@
+### registering existing user
+POST /api/auth/register
+Host: localhost:8400
+Content-Type: application/json
+
+{
+    "firstName": "Vinod",
+    "lastName": "Kumar",
+    "email": "vinod@vinod.co",
+    "password":"Welcome#123",
+    "userType":"customer"
+}
+### registering existing user
+POST /api/auth/register
+Host: localhost:8095
+Content-Type: application/json
+
+{
+    "firstName": "Manvendra",
+    "lastName": "Singh",
+    "email": "manvendra@gmail.com",
+    "password":"youwontguessthis",
+    "userType":"admin"
+}
+### registering a user 
+POST /api/auth/register
+Host: localhost:8095
+Content-Type: application/json
+
+{
+    "firstName": "Vinod",
+    "lastName": "kumar",
+    "email": "abc@abc.com",
+    "password":"youwontguessthis",
+    "userType":"customer"
+}
+### non-verified user
+POST /api/auth/login
+Host: localhost:8095
+Content-Type: application/json
+
+{
+    "email": "ayalalowery@stucco.com",
+    "password":"password"
+}
+### verified user
+POST /api/auth/login
+Host: localhost:8095
+Content-Type: application/json
+
+{
+    "email": "haysrussell@geekmosis.com",
+    "password":"password"
+}
+
+### verified user wrong password
+POST /api/auth/login
+Host: localhost:8095
+Content-Type: application/json
+
+{
+    "email": "abhishek212@gmail.com",
+    "password":"youwontguessu"
+}
+
+### verifing registered user
+POST /api/auth/verify-account
+Authorization: jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJIYXlzIiwidXNlclR5cGUiOiJjdXN0b21lciIsImV4cCI6MTYyODc2NDQwNCwidXNlcklkIjoiNjEwNjY4Yzk5NzMxNWVmMTdkYTYyMzQ5IiwiaWF0IjoxNjI4Njc4MDA0LCJlbWFpbCI6ImhheXNydXNzZWxsQGdlZWttb3Npcy5jb20ifQ.NiInTjVL6za5nbhWk1md3UsX5Qty2SS2z8eCm_D60JU
+Host: localhost:8095
+
+### non-verified user
+POST /api/auth/login
+Host: localhost:8095
+Content-Type: application/json
+
+{
+    "email": "vinod@vinod.co",
+    "password":"youwontguessthis"
+}
+
+### non-existing user
+POST /api/auth/login
+Host: localhost:8095
+Content-Type: application/json
+
+{
+    "email": "noone@vinod.co",
+    "password":"youwontguessthis"
+}
+
+###invalid token 
+GET /api/auth/verify?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJBYmhpc2hlayIsInVzZXJUeXBlIjoiYWRtaW4iLCJleHAiOjE2Mjc0Njc2MTIsInVzZXJJZCI6IjYwZmZkZGRjNTJlZTZjNzVkMGM4MzM5ZiIsImlhdCI6MTYyNzM4MTIxMiwiZW1haWwiOiJhYmhpc2hlazIxMkBnbWFpbC5jb20ifQ.c4csA_d7KOQOvUEznXOB20ffSDM9ZfTNdteCYk9xoEQ
+Host: localhost:8095
+
+### valid token
+GET /api/auth/verify?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJBYmhpc2hlayIsInVzZXJUeXBlIjoiYWRtaW4iLCJleHAiOjE2Mjc2MTU3NzAsInVzZXJJZCI6IjYxMDBkOTFmODRmYjkyNDU0ZjAyNGQzNiIsImlhdCI6MTYyNzUyOTM3MCwiZW1haWwiOiJhYmhpc2hlazIxMkBnbWFpbC5jb20ifQ.AS7y5w7HiQmfODaYH8o-CSjKEmmdl3jnKp26wBkzzY8
+Host: localhost:8095
+
+###
+GET /api/auth/get-token?email=abhishek212@gmail.com
+Host: localhost:8095
+
+### updating the new password as current password
+POST /api/auth/update-password
+Host: localhost:8095
+Content-Type: application/json
+Authorization: jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJBYmhpc2hlayIsInVzZXJUeXBlIjoiYWRtaW4iLCJleHAiOjE2Mjc1NDE3ODIsInVzZXJJZCI6IjYxMDBkOTFmODRmYjkyNDU0ZjAyNGQzNiIsImlhdCI6MTYyNzQ1NTM4MiwiZW1haWwiOiJhYmhpc2hlazIxMkBnbWFpbC5jb20ifQ.3NmCsTQ_AxbYiRNtUwwxL_siLOgzRO7LcrmdRlPJLNM
+
+{"password":"youwontguessthis"}
+
+### updating the new password
+POST /api/auth/update-password
+Host: localhost:8095
+Content-Type: application/json
+Authorization: jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJBYmhpc2hlayIsInVzZXJUeXBlIjoiYWRtaW4iLCJleHAiOjE2Mjc2MTU3NzAsInVzZXJJZCI6IjYxMDBkOTFmODRmYjkyNDU0ZjAyNGQzNiIsImlhdCI6MTYyNzUyOTM3MCwiZW1haWwiOiJhYmhpc2hlazIxMkBnbWFpbC5jb20ifQ.AS7y5w7HiQmfODaYH8o-CSjKEmmdl3jnKp26wBkzzY8
+
+{"password":"youwontguess"}
+
+### updating the password with wrong token 
+POST /api/auth/update-password
+Host: localhost:8095
+Content-Type: application/json
+Authorization: jwt eJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJBYmhpc2hlayIsInVzZXJUeXBlIjoiYWRtaW4iLCJleHAiOjE2Mjc1NDE3ODIsInVzZXJJZCI6IjYxMDBkOTFmODRmYjkyNDU0ZjAyNGQzNiIsImlhdCI6MTYyNzQ1NTM4MiwiZW1haWwiOiJhYmhpc2hlazIxMkBnbWFpbC5jb20ifQ.3NmCsTQ_AxbYiRNtUwwxL_siLOgzRO7LcrmdRlPJLNM
+
+{"password":"youwontguessthis"}
+
+### updating the password with token 
+POST /api/auth/update-password
+Host: localhost:8095
+Content-Type: application/json
+Authorization: jwt 
+
+{"password":"youwontguess"}
+
+
+#with encryption and decryption below
+
+###
+POST /api/auth/register
+Host: localhost:8095
+Content-Type: application/json
+
+{
+    "firstName": "Dealer",
+    "lastName": "kumar",
+    "email": "dollar@dealers.com",
+    "password":"password",
+    "userType":"dealer"
+}
+
+###
+POST /api/auth/login
+Host: localhost:8095
+Content-Type: application/json
+
+{
+    "email": "dollar@dealers.com",
+    "password":"password"
+}
+
+
+###
+GET /api/auth/verify?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJRSUZpYXRVOU5STEFPRmFSMEcvMnVnPT0iLCJ1c2VyVHlwZSI6ImN1c3RvbWVyIiwiZXhwIjoxNjI5OTYxNzk0LCJ1c2VySWQiOiI2MTI1ZWMzODQ3MzQ5ZjYwYTljZjNiYWEiLCJpYXQiOjE2Mjk4NzUzOTQsImVtYWlsIjoicHQ3UWZuYnR5K2toZWVrMUNKdk9Ldz09In0.NvQcj5Ov0ITzwxCpSjI4GppuwXHHqwDnlfnBuDktBHk
+Host: localhost:8095
+
+###
+POST /api/auth/verify-account
+Authorization: jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJRSUZpYXRVOU5STEFPRmFSMEcvMnVnPT0iLCJ1c2VyVHlwZSI6ImN1c3RvbWVyIiwiZXhwIjoxNjI5OTYyMzU2LCJ1c2VySWQiOiI2MTI1ZWMzODQ3MzQ5ZjYwYTljZjNiYWEiLCJpYXQiOjE2Mjk4NzU5NTYsImVtYWlsIjoicHQ3UWZuYnR5K2toZWVrMUNKdk9Ldz09In0.RpJ8_dDwRmoxr-4IIOrXx7g_JqO97otEvcITurnUSN8
+Host: localhost:8095
+
+
+###
+GET /api/auth/get-token?email=abc@dell.com
+Host: localhost:8095
+
+###
+POST /api/auth/update-password
+Host: localhost:8095
+Content-Type: application/json
+Authorization: jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJRSUZpYXRVOU5STEFPRmFSMEcvMnVnPT0iLCJ1c2VyVHlwZSI6ImN1c3RvbWVyIiwiZXhwIjoxNjI5OTY3MjUwLCJ1c2VySWQiOiI2MTI2MDFlODBhNTI2YzI4NmZlY2RhNmQiLCJpYXQiOjE2Mjk4ODA4NTAsImVtYWlsIjoicHQ3UWZuYnR5K2toZWVrMUNKdk9Ldz09In0.9IyJsgw4wklpeiiggEO6NFcfCQalbOOrwlP5sM4awiw
+
+{"password":"youwontguessthisyahoo"}

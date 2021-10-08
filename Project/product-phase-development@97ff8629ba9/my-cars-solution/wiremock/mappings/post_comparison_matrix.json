@@ -1,0 +1,10 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/api/vehicles/comparison"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "../__files/post_comparison_matrix_response.json"
+    }
+}

@@ -1,0 +1,41 @@
+server:
+    port: ${PORT:8090}
+
+cloud:
+    aws:
+        region:
+            static: us-east-1
+
+spring:
+    application:
+        name: email-service
+    kafka:
+        consumer:
+            bootstrap-servers: '${KAFKA_URL:localhost}:${KAFKA_PORT:9092}'
+            key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+            value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+            group-id: report-group
+            auto-offset-reset: earliest
+
+eureka:
+    client:
+        enabled: false
+
+
+management:
+    metrics:
+        tags:
+            application: mail-service
+
+    endpoint:
+        health:
+            show-details: always
+
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+            base-path: /api/mail/metrics
+
+kafkaEmailTopic: ${KAFKA_TOPIC:send-email}
+sendEmailUsing: aditya.gheewala@publicissapient.com

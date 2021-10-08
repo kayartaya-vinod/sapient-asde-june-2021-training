@@ -1,0 +1,21 @@
+{
+    "request": {
+      "method": "GET",
+      "urlPattern": "/api/auth/verify/\\?jwt=([a-zA-Z0-9]+)"
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "jsonBody": {
+        "firstName": "Name",
+        "userType": "customer",
+        "exp": "23423423",
+        "userId": "1",
+        "iat": "3242342342",
+        "email": "sdfsdfsdfsd"
+      }
+    }
+  }
+  

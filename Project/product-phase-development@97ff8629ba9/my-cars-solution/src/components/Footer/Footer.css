@@ -1,0 +1,15 @@
+.custom-footer {
+  padding-top: 4%;
+}
+@media only screen and (max-width: 728px) {
+  .custom-footer {
+    padding-top: 25%;
+  }
+}
+
+
+
+
+
+
+

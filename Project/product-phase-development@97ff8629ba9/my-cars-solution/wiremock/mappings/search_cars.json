@@ -1,0 +1,16 @@
+{
+    "request":{
+        "method": "GET",
+        "url":"/api/vehicles/search?q=spectra"
+    },
+    "response":{
+       "status":200,
+        "headers":
+        {
+        "Content-Type" : "application/json"
+        
+        },
+        "bodyFileName":"../__files/search_cars_response2.json"
+    }
+}
+

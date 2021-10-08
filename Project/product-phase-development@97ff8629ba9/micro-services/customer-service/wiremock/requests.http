@@ -1,0 +1,101 @@
+POST /api/customers/change-password
+Host: localhost:8080
+Content-Type: application/json
+Accept: application/json
+Authorization: JWT asbbsa
+
+{
+  "old_password": "old",
+  "password": "new", 
+  "confirm_password": "new"
+}
+
+###
+
+GET /api/auth/verify?jwt=545463543dfdf
+Host: localhost:8888
+Accept: application/json
+
+###
+
+GET /api/auth/get-token?email=234nj23nk4@gmail.com
+Host: localhost:8888
+Accept: application/json
+
+###
+
+POST /api/auth/login
+Host: localhost:8888
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "sdfsdf",
+  "password": "sdkjfnsdk"
+}
+
+###
+
+POST /api/auth/update-password
+Host: localhost:8888
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": "sdfn3434fdff3",
+  "firstName": "Name",
+  "lastName": "LastName",
+  "userType": "customer",
+  "email": "sdfsdfsdfsd@sdfn",
+  "password": "sdfsdfsdfsd"
+}
+
+###
+
+POST /api/mail
+Host: localhost:8888
+Content-Type: application/json
+
+{
+  "mail" : {
+    "to" : ["aditya.gheewala@publicissapient.com"],
+    "from": "aditya.gheewala@publicissapient.com",
+    "subject": "Reset password",
+    "message": "Please follow this link to reset password ----link----"
+  }
+}
+
+
+###
+
+GET /api/customers/reset-password-link?email=234nj23nk4@gmail.com
+Host: localhost:8096
+Accept: application/json
+###
+
+POST /api/customers/reset-password
+Host: localhost:8096
+Content-Type: application/json
+Accept: application/json
+
+{
+  "token": "sdfsd",
+  "password": "sdf"
+}
+###
+
+POST /api/auth/update-password
+Host: localhost:8096
+Content-Type: application/json
+Accept: application/json
+Authorization: JWT 34534543534dffdv
+
+{
+  "password": "sdf"
+}
+
+###
+
+GET /api/customers/reset-password-link-kafka?email=234nj23nk4@gmail.com
+Host: localhost:8096
+Accept: application/json

@@ -1,0 +1,13 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/api/vehicles/accessories/search?q=Honda&page=1"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "../__files/get_allAccessory_response.json",
+        "headers": {
+            "content-type": "application/json"
+        }
+    }
+}

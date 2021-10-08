@@ -1,0 +1,17 @@
+    {
+        "request": {
+            "method": "POST",
+            "url": "/api/data/upload/json"
+        },
+        "response": {
+            "status": 200,
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "jsonBody": {
+                "message": "Accessories added successfully",
+                "success": true,
+                "payload":"FILE_UPLOAD_SUCCESS"
+            }
+        }
+    }

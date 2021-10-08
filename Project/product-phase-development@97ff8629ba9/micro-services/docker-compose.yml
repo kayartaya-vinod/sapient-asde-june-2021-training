@@ -1,0 +1,209 @@
+# services to be configured:
+# elasticsearch - done
+# fluentd - done
+# kibana - done
+# gateway-service - done
+# eureka-service - done
+# customer-service - done
+# auth-service - done
+# email-service - done
+# zookeeper
+# kafka
+
+version: "3.8"
+
+services:
+  fluentd:
+    build: ./efk/fluentd
+    container_name: fluentd
+    volumes:
+      - ./efk/fluentd/conf:/fluentd/etc
+    ports:
+      - "24224:24224"
+      - "24224:24224/udp"
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.5.4
+    container_name: elasticsearch
+    environment:
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - esdata1:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:6.5.4
+    container_name: kibana
+    environment:
+      ELASTICSEARCH_URL: "http://elasticsearch:9200"
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+
+  eureka-service:
+    build: ./eureka-service
+    container_name: eureka-service
+    ports:
+      - "8761:8761"
+    depends_on:
+      - fluentd
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: fluentd
+
+  gateway-service:
+    build: ./gateway-service
+    container_name: gateway-service
+    ports:
+      - "8400:8400"
+    depends_on:
+      - fluentd
+      - eureka-service
+    environment:
+      - EUREKA_URL=eureka-service
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: fluentd
+
+  auth-service:
+    build: ./auth-service
+    container_name: auth-service
+    ports:
+      - "8095:8095"
+    depends_on:
+      - fluentd
+      - eureka-service
+    environment:
+      - KAFKA_URL=kafka-server
+      - KAFKA_PORT=9092
+      - EUREKA_URL=eureka-service
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: fluentd
+
+  customer-service:
+    build: ./customer-service
+    container_name: customer-service
+    ports:
+      - "8096:8096"
+    depends_on:
+      - fluentd
+      - eureka-service
+    environment:
+      - EUREKA_URL=eureka-service
+      - EUREKA_PORT=8761
+      - AUTH_URL=auth-service
+      - AUTH_PORT=8095
+      - DB_URL=54.234.219.42
+      - DB_NAME=mycarsolution
+      - EMAIL_URL=email-service
+      - EMAIL_PORT=8090
+      - KAFKA_URL=kafka-server
+      - KAFKA_PORT=9092
+      - WEB_URL=localhost
+      - WEB_PORT=3000
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: fluentd
+
+  email-service:
+    build: ./email-service
+    container_name: email-service
+    ports:
+      - "8090:8090"
+    depends_on:
+      - fluentd
+      - eureka-service
+    environment:
+      - EUREKA_URL=eureka-service
+      - EUREKA_PORT=8761
+      - KAFKA_URL=kafka-server
+      - KAFKA_PORT=9092
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: fluentd
+
+  vehicle-service:
+    build: ./vehicle-service
+    container_name: vehicle-service
+    ports:
+      - "8097:8097"
+    depends_on:
+      - fluentd
+      - eureka-service
+    environment:
+      - EUREKA_URL=eureka-service
+      - EUREKA_PORT=8761
+      - AUTH_URL=auth-service
+      - CUST_URL=customer-service
+      - AUTH_PORT=8095
+      - CUST_PORT=8096
+      - DB_URL=54.234.219.42
+      - DB_NAME=mycarsolution
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: fluentd
+
+  vehicle-data-service:
+    build: ./vehicle-data-service
+    container_name: vehicle-data-service
+    ports:
+      - "8098:8098"
+    depends_on:
+      - fluentd
+      - eureka-service
+    environment:
+      - EUREKA_URL=eureka-service
+      - EUREKA_PORT=8761
+      - AUTH_URL=auth-service
+      - AUTH_PORT=8095
+      - DB_URL=54.234.219.42
+      - DB_NAME=mycarsolution
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: fluentd
+
+  zookeeper:
+    container_name: zookeeper
+    image: docker.io/bitnami/zookeeper:3.7
+    ports:
+      - "2181:2181"
+    volumes:
+      - "zookeeper_data:/bitnami"
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+
+  kafka-server:
+    container_name: kafka-server
+    image: docker.io/bitnami/kafka:2
+    ports:
+      - "9092:9092"
+    volumes:
+      - "kafka_data:/bitnami"
+    environment:
+      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
+      - ALLOW_PLAINTEXT_LISTENER=yes
+    depends_on:
+      - zookeeper
+
+volumes:
+  esdata1:
+    driver: local
+  zookeeper_data:
+    driver: local
+  kafka_data:
+    driver: local

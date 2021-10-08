@@ -1,0 +1,11 @@
+POST /api/mail
+Host: localhost:8400
+Content-Type: application/json
+
+{
+  "mail" : {
+    "to" : ["sBH57ZAnlmFNz2LRa70p2BFcYV3FpR45BCxTBqFEjezl61zn5t1dAvFcKptJMpp7"],
+    "subject": "Reset password",
+    "message": "Please follow this link to reset password ----link---- from gatEWAY"
+  }
+}

@@ -1,0 +1,64 @@
+pipeline {
+    agent any
+
+    environment {
+        ORG_NAME = "mansingh81"
+        APP_NAME = "auth-service"
+        APP_VERSION = "0.0.1-SNAPSHOT"
+        APP_CONTEXT_ROOT = "./micro-services/auth-service"
+        APP_LISTENING_PORT = "8095"
+        TEST_CONTAINER_NAME = "ci-${APP_NAME}-${BUILD_NUMBER}"
+    }
+
+    stages{
+
+        stage('compile'){
+            steps {
+                dir("${APP_CONTEXT_ROOT}") {
+                    echo 'compiling...'
+                    bat 'mvn clean compile'
+                }
+            }
+        }
+
+        stage('unit test'){
+            steps {
+                dir("${APP_CONTEXT_ROOT}") {
+                    echo 'unit tests...'
+                    bat 'mvn test'
+                    junit 'target/surefire-reports/*.xml'
+                    jacoco execPattern: 'target/jacoco.exec'
+                }
+            }
+        }
+
+        stage('build'){
+            steps {
+                dir("${APP_CONTEXT_ROOT}") {
+                    echo 'creating jar...'
+                    bat 'mvn package -DskipTests=true'
+                    archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+                }
+            }
+        }
+
+       stage('Code inspection & quality gate') {
+           steps {
+                dir("${APP_CONTEXT_ROOT}") {
+                    echo "run code inspection & check quality gate..."
+                    withSonarQubeEnv('ci-sonarqube') {
+                        bat "mvn sonar:sonar"
+                    }
+               }
+           }
+       }
+    }
+    post {
+        always {
+            echo "removing docker test container..."
+            // bat "docker stop ${TEST_CONTAINER_NAME}"
+            echo "removing the workspace"
+            cleanWs()
+        }
+    }
+}

@@ -1,0 +1,5 @@
+POST /api/generate-report
+Host: localhost:8080
+Content-Type: text/plain
+
+"Shyam, past 1 year, amount received"

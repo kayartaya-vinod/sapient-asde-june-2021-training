@@ -1,0 +1,49 @@
+server:
+    port: ${PORT:8096}
+
+spring:
+    application:
+        name: customer-service
+
+    data:
+        mongodb:
+            username: admin
+            password: Welcome#123
+            database: ${DB_NAME:mycarsolution}
+            host: ${DB_URL:54.234.219.42}
+            port: ${DB_PORT:27017}
+
+    kafka:
+        producer:
+            bootstrap-servers: '${KAFKA_URL:localhost}:${KAFKA_PORT:9092}'
+            key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+            value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+eureka:
+    client:
+        fetchRegistry: true
+        registerWithEureka: true
+        serviceUrl:
+            defaultZone: http://${EUREKA_URL:localhost}:${EUREKA_PORT:8761}/eureka/
+    instance:
+        hostname: ${EUREKA_URL:localhost}
+        prefer-ip-address: true
+
+management:
+    server:
+        port: ${ACTUATOR_PORT:9877}
+
+    endpoints:
+        web:
+            exposure:
+                include: health,env,beans
+
+authVerifyUrl: http://${AUTH_URL:localhost}:${AUTH_PORT:8095}/api/auth/verify
+authLoginUrl: http://${AUTH_URL:localhost}:${AUTH_PORT:8095}/api/auth/login
+authCreateUrl: http://${AUTH_URL:localhost}:${AUTH_PORT:8095}/api/auth/get-token
+authUpdatePasswordUrl: http://${AUTH_URL:localhost}:${AUTH_PORT:8095}/api/auth/update-password
+emailSendEmail: http://${EMAIL_URL:localhost}:${EMAIL_PORT:8090}/api/mail
+webUrl: http://${WEB_URL:localhost}:${WEB_PORT:3000}/forgot-password/
+
+kafkaEmailTopic: ${KAFKA_TOPIC:send-email}
+vehicleServiceUrl: http://${VEHICLE_URL:localhost}:${VEHICLE_PORT:8097}/api/vehicles/

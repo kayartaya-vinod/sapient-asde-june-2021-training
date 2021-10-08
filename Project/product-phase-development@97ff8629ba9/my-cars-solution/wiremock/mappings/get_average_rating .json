@@ -1,0 +1,22 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/api/vehicles/average-rating/vehicle123",
+        "headers": {
+            "Accept": {
+                "contains": "json"
+            }
+        }
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json, text/plain, */*"
+        },
+        "jsonBody": {
+            "success": true,
+            "averageRating": 4,
+	     "totalCustomer":200
+        }
+    }
+}

@@ -1,0 +1,77 @@
+http://localhost:8080/java-webapp
+
+###
+
+GET /java-webapp HTTP/1.1
+Host: localhost:8080
+Accept: text/html
+
+
+###
+
+GET /users
+Host: api.github.com
+Accept: application/json
+
+###
+
+POST /users
+Host: api.github.com
+Content-Type: application/json
+
+{
+    "login": "kayartayavinod",
+    "node_id": "MDQ6VXNlcjE=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mojombo",
+    "html_url": "https://github.com/mojombo",
+    "followers_url": "https://api.github.com/users/mojombo/followers",
+    "following_url": "https://api.github.com/users/mojombo/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mojombo/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mojombo/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mojombo/subscriptions",
+    "organizations_url": "https://api.github.com/users/mojombo/orgs",
+    "repos_url": "https://api.github.com/users/mojombo/repos",
+    "events_url": "https://api.github.com/users/mojombo/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mojombo/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+
+###
+
+GET /java-webapp/hello
+Host: localhost:8080
+
+###
+
+GET /java-webapp/table?num=1298 HTTP/1.1
+Host: localhost:8080
+Accept: text/html
+
+
+###
+
+GET /java-webapp/table?num=asd
+Host: localhost:8080
+Accept: text/html
+
+###
+
+GET /java-webapp/table
+Host: localhost:8080
+Accept: text/html
+
+
+###
+
+POST /java-webapp/table HTTP/1.0
+Host: localhost:8080
+Accept: text/html
+
+###
+
+GET /java-webapp/product-list
+Host: localhost:8080
+Accept: text/html

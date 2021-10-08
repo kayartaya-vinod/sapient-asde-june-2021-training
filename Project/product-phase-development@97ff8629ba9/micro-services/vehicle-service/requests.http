@@ -1,0 +1,485 @@
+
+### Rohit
+
+POST   /api/vehicles/add-accessory
+Host: localhost:8097
+Content-Type: application/json
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJ1c2VyMSIsInVzZXJUeXBlIjoiRGVhbGVyIiwiZXhwIjoxNjMwMDQwMTY5LCJ1c2VySWQiOiI2MTI0OTY3ZDYzOGMzYTkyNzBmNzZiMTEiLCJpYXQiOjE2Mjk5NTM3NjksImVtYWlsIjoidXNlcjFAZ21haWwuY29tIn0.EWwy41fKBOQM0tZqLuAnL-Offd8qlsRW9cwh5dg_G6k
+
+{
+    "demo": 9
+}
+
+#####
+### Mritunjay 
+
+POST   /api/vehicles/rating
+Host: localhost:8097
+Content-Type: application/json
+Authorization: JWT random123
+
+{
+    "vehicleId":"hello",
+    "userId":"sfd",
+    "rating":"5"
+}
+
+###Akhilesh
+GET /api/vehicles/comparison?brand=&&model=
+Host: localhost:8097
+
+###
+GET /api/vehicles/rating/hello
+Host: localhost:8097
+
+###
+
+http://localhost:8097/api/vehicles/sponsored
+
+###
+
+http://localhost:8097/api/vehicles/comparison/hello-stub
+###
+GET /api/vehicles/search?q=audi&page=1
+Host:localhost:8097
+Accept: application/json
+###
+GET /api/vehicles/reviews?q=6114d0333bf88f5822eeca6e
+Host:localhost:8400
+Accept: application/json
+
+###
+GET /api/users?q=610668c997315ef17da622cc
+Host:localhost:8400
+Accept: application/json
+
+# Deepthi
+###
+GET /api/vehicles/advanced-search?brand=Hyundai,Honda,Tata&vehicle_type=sedan&vehicle_type=SUV&page=15
+Host: localhost:8097
+Accept: application/json
+
+###
+GET /api/vehicles/advanced-search?min_price=200000&max_price=3000000
+Host: localhost:8097
+Accept: application/json
+
+###
+GET /api/vehicles/advanced-search?brand=Hyundai,Honda,Tata,Mahindra&vehicle_type=SUV&min_price=10000&max_price=5000000
+Host: localhost:8097
+Accept: application/json
+
+###
+GET /api/vehicles/advanced-search?color=BROWN
+Host: localhost:8097
+Accept: application/json
+###
+GET /api/vehicles/advanced-search?color=white,blue
+Host: localhost:8097
+Accept: application/json
+
+###
+GET /api/vehicles/advanced-search?fuel_type=diesel
+Host: localhost:8097
+Accept: application/json
+
+###
+GET /api/vehicles/advanced-search?air_bag=5
+Host: localhost:8097
+Accept: application/json
+
+###
+GET /api/vehicles/advanced-search?brand=Honda&brand=Tata&brand=Mahindra&vehicle_type=Sedan&vehicle_type=SUV&year=2009
+Host: localhost:8097
+Accept: application/json
+
+### Sumitesh Naithani
+POST /api/vehicles/vehicle123/reviews
+Host: localhost:8097
+Content-Type: application/json
+Authorization: JWT randomToken1234
+
+{
+    "review": "This is a overwritten review by user1234"
+}
+
+
+### Sumitesh Naithani
+GET /api/vehicles/vehicle123/reviews
+Host: localhost:8097
+Authorization: JWT randomToken1234
+
+### VALID
+GET /api/vehicles/comparison/6108d030f9baf7e524696724
+Host: localhost:8097
+Authorization: JWT token
+
+### INVALID
+GET /api/vehicles/comparison/610803137278807dea378d2b
+Host: localhost:8097
+Authorization: JWT token
+
+
+### INVALID
+GET /api/vehicles/comparison/611ce5cf01198678497cbc03
+Host: localhost:8097
+Authorization: JWT token
+
+
+###
+
+DELETE /api/vehicles/comparison/611ce5cf01198678497cbc03
+Host: localhost:8097
+Authorization: JWT token
+
+###
+
+DELETE /api/vehicles/comparison/1
+Host: localhost:8097
+Authorization: JWT token
+
+
+###
+http://localhost:8095/api/auth/verify/?jwt=sdfdf
+
+###
+http://localhost:8097/api/vehicles/?page=3
+
+###
+GET /api/vehicles/comparison/download/hjasghdakjshdkj
+Host: localhost:8097
+Authorization: jwt token
+
+###
+GET /api/cutomers/matrix-metadata
+Host: localhost:8097
+Authorization: jwt token
+
+###
+GET /api/vehicles/matrix-metadata
+Host: localhost:8097
+Authorization: jwt token
+###invalid ID
+http://localhost:8097/api/vehicles/6108de758ed3d6bd2c9af8b
+
+###valid ID
+http://localhost:8097/api/vehicles/6108de758ed3d6bd2c9af8b5
+
+
+###
+
+POST /api/vehicles/comparison
+Host: localhost:8097
+Content-Type: application/json
+Authorization: JWT token
+
+{    
+    "vehicleIds": ["61164d7d40164c0f189eb590", "61164d7d40164c0f189eb591"],
+    "comparisonMatrixName":"Name3"   
+}
+
+###
+POST /api/auth/login
+Host: localhost:8400
+Content-Type: application/json
+
+{
+    "email": "maudehamilton@geekmosis.com",
+    "password": "password"
+}
+
+###
+GET /api/vehicles/comparison/download/610cccfb4893ef249aeafa5c
+Host: localhost:8400
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJOb2JsZSIsInVzZXJUeXBlIjoiY3VzdG9tZXIiLCJleHAiOjE2MjgzMTM1MTAsInVzZXJJZCI6IjYxMDY2OGM5OTczMTVlZjE3ZGE2MjJjNCIsImlhdCI6MTYyODIyNzExMCwiZW1haWwiOiJub2JsZW5vYmxlQGdlZWttb3Npcy5jb20ifQ.PexSI5unfx5HGGuYuTNstp7MhAmo0z6xnNhrPml3lxs
+
+###
+GET /api/vehicles/search?q=BMW
+Host: localhost:8400
+
+
+
+### Pritam Patel
+POST /api/auth/login
+Host: localhost:8400
+Content-Type: application/json
+
+{
+    "email": "marshaflores@geekmosis.com",
+    "password": "password"
+}
+
+
+###
+POST   /api/vehicles
+Host: localhost:8400
+Content-Type: application/json
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJTa2lubmVyIiwidXNlclR5cGUiOiJkZWFsZXIiLCJleHAiOjE2Mjg5MTkyMTQsInVzZXJJZCI6IjYxMDY2OGM5OTczMTVlZjE3ZGE2MjJjNSIsImlhdCI6MTYyODgzMjgxNCwiZW1haWwiOiJkZWFsZXJAZG9tYWluLmNvbSJ9.WL2Y3uzeohIaEJgGV5AMjsuGPUbIuWcIbdtFDD-GLzs
+
+{
+            "tankCapacity": "210 L",
+            "mediaInterface": "button",
+            "theftAlarm": false,
+            "pictureUrls": [
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*",
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*"
+            ],
+            "tripMeter": "analog",
+            "airBagCount": 20,
+            "description": "This is a car",
+            "price": 918231.0,
+            "color": "black",
+            "vin": "6107bc53b4c7c08a02958904",
+            "brand": "Ferrari",
+            "model": "r100",
+            "year": "2018",
+            "vehicleType": "deluxe",
+            "fuelType": [
+                "diesel",
+                "petrol"
+            ],
+            "unitsFuelConsumption": "36 km/l",
+            "transmissionGearType": "auto",
+            "steeringWheelType": "power",
+            "vehicleSpeed": "177 km/h",
+            "horn": "air horn",
+            "powerTrainTorque": "100Nm",
+            "accelaration": "10m/s2",
+            "nightMode": true,
+            "isABS": true,
+            "wheelRadius": "50cm",
+            "wheelSpeed": "10km/h",
+            "light": {
+                "fog": false,
+                "hazard": false,
+                "parking": true,
+                "dynamicHighBeam": true,
+                "automaticHeadlights": false
+            },
+            "ignitionTime": "5s",
+            "odometer": false,
+            "washerFluid": true,
+            "malfunctionIndicator": true,
+            "batteryLevel": 40,
+            "airConditioning": false,
+            "languageConfiguration": [
+                "English",
+                "Hindi"
+            ],
+            "mirror": "auto",
+            "childSafetyLock": true,
+            "topSpeedLimit": "210 km/h",
+            "climate": {
+                "climateControl": true,
+                "sunroof": false,
+                "defrost": true
+            },
+            "chime": true 
+}
+#####
+GET /api/vehicles/average-rating/1a8b19f0-eb69-4e4d-a43e-621acce7431b
+Host: localhost:8097
+
+###
+GET /api/vehicles/average-rating/1a8b19f0-eb69-4e4d-a43e-621acce74dfg
+Host: localhost:8097
+
+
+###   Suraj Kumar
+GET /api/vehicles/dealer/6114b84995e2da80f3d8d814
+Host: localhost:8097
+Authorization: jwt token
+
+
+###  Suraj Kumar
+PUT /api/vehicles/dealer/update-vehicle
+Host: localhost:8097
+Authorization: jwt token
+Content-Type: application/json
+
+  {
+            "id": "61164d7d40164c0f189eb6a9",
+            "dealerId": "4sad46d64zc",
+            "tankCapacity": "99 L",
+            "mediaInterface": "button",
+            "theftAlarm": false,
+            "pictureUrls": ["1.jpg","2.jpg"],
+            "tripMeter": "analog",
+            "airBagCount": 4,
+            "description": "This is a car",
+            "price": 918231.0,
+            "color": "black",
+            "vin": "6107bc53b4c7c08a02958904",
+            "brand": "Honda",
+            "model": "r100",
+            "year": "2018",
+            "vehicleType": "deluxe",
+            "fuelType": [
+                "diesel",
+                "petrol"
+            ],
+            "unitsFuelConsumption": "36 km/l",
+            "transmissionGearType": "auto",
+            "steeringWheelType": "power",
+            "vehicleSpeed": "177 km/h",
+            "horn": "air horn",
+            "powerTrainTorque": "100Nm",
+            "accelaration": "10m/s2",
+            "nightMode": true,
+            "isABS": true,
+            "wheelRadius": "50cm",
+            "wheelSpeed": "10km/h",
+            "light": {
+                "fog": false,
+                "hazard": false,
+                "parking": true,
+                "dynamicHighBeam": true,
+                "automaticHeadlights": false
+            },
+            "ignitionTime": "5s",
+            "odometer": false,
+            "washerFluid": true,
+            "malfunctionIndicator": true,
+            "batteryLevel": "40",
+            "airConditioning": false,
+            "languageConfiguration": [
+                "English",
+                "Hindi"
+            ],
+            "mirror": "auto",
+            "childSafetyLock": true,
+            "topSpeedLimit": "210 km/h",
+            "climate": {
+                "climateControl": true,
+                "sunroof": false,
+                "defrost": true
+            },
+            "chime": true
+        }
+
+
+
+###Hrishant
+GET /api/vehicles/dealer?page=1
+Host: localhost:8097
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJTa2lubmVyIiwidXNlclR5cGUiOiJkZWFsZXIiLCJleHAiOjE2Mjg5MTkyMTQsInVzZXJJZCI6IjYxMDY2OGM5OTczMTVlZjE3ZGE2MjJjNSIsImlhdCI6MTYyODgzMjgxNCwiZW1haWwiOiJkZWFsZXJAZG9tYWluLmNvbSJ9.WL2Y3uzeohIaEJgGV5AMjsuGPUbIuWcIbdtFDD-GLzs
+###
+DELETE  /api/vehicles/dealer?ids=61164d7d40164c0f189eb58f
+Host: localhost:8097
+Authorization: jwt token
+
+###
+
+GET /api/vehicles/dealer?page=1
+Host: localhost:8097
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJ1c2VyMSIsInVzZXJUeXBlIjoiZGVhbGVyIiwiZXhwIjoxNjI5ODYyMjk3LCJ1c2VySWQiOiI2MTFkZjk1OTA4NzIwNjZhMTUyZGFkNzMiLCJpYXQiOjE2Mjk3NzU4OTcsImVtYWlsIjoiZGVhbGVyQGRvbWFpbi5jb20ifQ.cUOkwVcaICbSK7F9HKsHZRY8eGytDD4qsf1pI-NXM14
+
+
+### Neha
+GET /api/vehicles/accessory/611c8c5d47db257ec022f382
+Host: localhost:8097
+
+
+
+
+### Shubham Chaudhary -> Valid Request
+http://localhost:8097/api/vehicles/compare?ids=611b3f0611424726b58388d2,611b3f1011424726b58388d3
+
+
+### Shubham Chaudhary -> Valid Request
+http://localhost:8097/api/vehicles/compare?ids=611e37ecc9e50f4b5d413b85,611e57905fd9dbae622a49db,611b408b11424726b58388d7,611e1622c9e50f4b5d413b84
+
+
+### Shubham Chaudhary -> Valid Request
+http://localhost:8097/api/vehicles/compare?ids=611b3f0611424726b58388d2
+
+
+### Shubham Chaudhary -> Invalid Request
+http://localhost:8097/api/vehicles/compare?ids=611b3f0611424726b58388d2,611e1622c9e50f4b5d413b84,611b3f1011424726b58388d3,611b3f1011424726b58388d3,611b3f1011424726b58388d3
+
+
+### Shubham Chaudhary -> Invalid Request
+http://localhost:8097/api/vehicles/compare?ids=611b3f0611424726b58388d2,invalidId
+###
+### Sakshi
+GET /api/vehicles/accessories/search?q=Mud Flap (Set Of 4)&page=1
+Host:localhost:8097
+Accept: application/json
+
+### Sakshi
+GET /api/vehicles/accessories/search?q=&page=1
+Host:localhost:8097
+Accept: application/json
+
+###  Sakshi
+GET /api/vehicles/accessories/search?q=ABC&page=1
+Host:localhost:8097
+Accept: application/json
+
+
+http://localhost:8097/api/vehicles/search-attributes
+
+
+
+### Pritam Patel    
+### 
+PUT /api/accessory/dealer/update-accessory
+Host: localhost:8097
+Content-Type: application/json
+Authorization: jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJ1c2VyMSIsInVzZXJUeXBlIjoiZGVhbGVyIiwiZXhwIjoxNjMwMDM3MDk5LCJ1c2VySWQiOiI2MTI0OTY3ZDYzOGMzYTkyNzBmNzZiMTEiLCJpYXQiOjE2Mjk5NTA2OTksImVtYWlsIjoidXNlcjFAZ21haWwuY29tIn0.YFV-oo7KWXgPJGgtKi9udSL3Y-YZRMVRlEJh-D8tYkI
+
+{
+    "id": "612492c50696e8167a6206dc",
+    "price": 1323.04,
+  "description": "Multi-layered user-facing database",
+  "name": "Premium Universal Stitch Steering Cover Black",
+  "pictureUrls": [
+    "https://boodmo.com/media/cache/catalog_part/images/parts/44cb0ab9796627d89f684fecfe152986.jpg",
+    "https://boodmo.com/media/cache/small_part/images/parts/40ecfecac13319169669580bebe41a1a.jpg",
+    "https://boodmo.com/media/cache/small_part/images/parts/1bf5b48110734b52b4e5cd0c74ee1211.jpg",
+    "https://boodmo.com/media/cache/small_part/images/parts/5c39e2212956ed15182d7e0044905e9d.jpg"
+  ],
+  "dealerId": "6124967d638c3a9270f76b11"
+}
+
+
+
+###
+POST  /api/auth/login
+### Get accesories as list with pagination
+###Manvendra 
+GET /api/vehicles/dealer/accessories?page=5
+Host: localhost:8097
+Authorization: JWT  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJ1c2VyMSIsInVzZXJUeXBlIjoiZGVhbGVyIiwiZXhwIjoxNjMwMDM3MDk5LCJ1c2VySWQiOiI2MTI0OTY3ZDYzOGMzYTkyNzBmNzZiMTEiLCJpYXQiOjE2Mjk5NTA2OTksImVtYWlsIjoidXNlcjFAZ21haWwuY29tIn0.YFV-oo7KWXgPJGgtKi9udSL3Y-YZRMVRlEJh-D8tYkI
+### Aravind
+POST /api/auth/login
+Host: localhost:8095
+Content-Type: application/json
+
+{
+    "email": "user1@gmail.com",
+    "password": "password"
+}
+
+### Aravind 
+DELETE http://localhost:8097/api/vehicle/delete-accessory?id=612492c50696e8167a6206da
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJ1c2VyMSIsInVzZXJUeXBlIjoiZGVhbGVyIiwiZXhwIjoxNjMwMDM3MDk5LCJ1c2VySWQiOiI2MTI0OTY3ZDYzOGMzYTkyNzBmNzZiMTEiLCJpYXQiOjE2Mjk5NTA2OTksImVtYWlsIjoidXNlcjFAZ21haWwuY29tIn0.YFV-oo7KWXgPJGgtKi9udSL3Y-YZRMVRlEJh-D8tYkI
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJ1c2VyMiIsInVzZXJUeXBlIjoiRGVhbGVyIiwiZXhwIjoxNjI5ODg5MjgwLCJ1c2VySWQiOiI2MTI0OTY3ZDYzOGMzYTkyNzBmNzZiMTMiLCJpYXQiOjE2Mjk4MDI4ODAsImVtYWlsIjoidXNlcjJAZ21haWwuY29tIn0.kvsNdQyAjYKqwcPxRwS0pFurOzYFGk6Fr21momtf4Yc
+   
+
+### Deepthi
+POST /api/auth/login
+Host: localhost:8400
+Content-Type: application/json
+
+{    "email": "user1@gmail.com",
+    "password": "password"
+}
+
+###
+GET /api/vehicles/dealer/feedbacks?page=1
+Host: localhost:8400
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJ1c2VyMSIsInVzZXJUeXBlIjoiRGVhbGVyIiwiZXhwIjoxNjI5OTc0NzU0LCJ1c2VySWQiOiI2MTI0OTY3ZDYzOGMzYTkyNzBmNzZiMTEiLCJpYXQiOjE2Mjk4ODgzNTQsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIn0.VbE4RJlC5jFiizV3xKsQ61MLlfBwd1bCGZ7WUDwwMOM
+
+###
+http://localhost:8096/api/users?q=612497d6638c3a92700092d1

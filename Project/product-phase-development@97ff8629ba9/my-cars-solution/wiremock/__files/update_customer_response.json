@@ -1,0 +1,30 @@
+{
+    "_id": "1230d91f84fb92454f024d36",
+    "userId": "6100d91f84fb92454f024d36",
+    "firstName": "Rohit",
+    "lastName": "Singh",
+    "email": "rohit@gmail.com",
+    "alternateEmail": "rohit2@gmail.com",
+    "password": "4578!@#",
+    "address": {
+        "default": {
+            "buildingNo": "55",
+            "street": "kali gali",
+            "landMark": "near tripathi bhawan",
+            "city": "mirzapur",
+            "state": "uttar pradesh",
+            "pinCode": "831313"
+        },
+        "anotherAddress": {
+            "buildingNo": "55",
+            "street": "kali gali",
+            "landMark": "near tripathi bhawan",
+            "city": "mirzapur",
+            "state": "uttar pradesh",
+            "pinCode": "831313"
+        }
+    },
+    "contactNo": "7898789878",
+    "alternateContactNo": "78987898752",
+    "wishlist": ["carid", "carid2"]
+}

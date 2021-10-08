@@ -1,0 +1,11 @@
+@startuml
+
+class Person {
+    - name: String
+    - city: String
+    + Person()
+    + setName(name: String): void
+    +setCity(city: String): void
+}
+
+@enduml

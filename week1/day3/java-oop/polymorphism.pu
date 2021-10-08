@@ -1,0 +1,42 @@
+@startuml
+
+' interface Shape{
+'     +getArea(): double
+' }
+
+' Shape <|.. Triangle
+' Shape <|.. Circle
+' Shape <|.. Rectangle
+' Shape <|.. Pentagon
+
+
+class Animal {
+    + logAuthorDetails(): void
+    + whoAmI(): void
+}
+
+class Cat {
+    + whoAmI(): void
+}
+
+class Lion {
+    + whoAmI(): void
+}
+
+class Tiger {
+    + whoAmI(): void
+}
+
+class Dog {
+    + whoAmI(): void
+}
+
+Animal <|- Cat
+
+Animal <|- Dog
+
+Animal <|- Lion
+
+Animal <|- Tiger
+
+@enduml

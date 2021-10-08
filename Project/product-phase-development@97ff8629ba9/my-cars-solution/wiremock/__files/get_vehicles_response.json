@@ -1,0 +1,774 @@
+{
+    "content": [
+        {
+            "id": "6108bbfeda1166446cf87858",
+            "dealerId": "6107bc53a1961336098de4b7",
+            "tankCapacity": "31 L",
+            "mediaInterface": "button",
+            "theftAlarm": false,
+            "pictureUrls": [
+                "https://i.pinimg.com/originals/95/37/28/953728c59e28e7e13550344d08f1b52a.jpg",
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*",
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*"
+            ],
+            "tripMeter": "analog",
+            "airBagCount": 4,
+            "description": "This is a car",
+            "price": 918231.0,
+            "color": "brown",
+            "vin": "6107bc53b4c7c08a02958904",
+            "brand": "Honda",
+            "model": "r100",
+            "year": "2018.0",
+            "vehicleType": "deluxe",
+            "fuelType": [
+                "diesel",
+                "petrol"
+            ],
+            "unitsFuelConsumption": "36 km/l",
+            "transmissionGearType": "auto",
+            "steeringWheelType": "power",
+            "vehicleSpeed": "177 km/h",
+            "horn": "air horn",
+            "powerTrainTorque": "100Nm",
+            "accelaration": "10m/s2",
+            "nightMode": true,
+            "isABS": true,
+            "wheelRadius": "50cm",
+            "wheelSpeed": "10km/h",
+            "light": {
+                "fog": false,
+                "hazard": false,
+                "parking": true,
+                "dynamicHighBeam": true,
+                "automaticHeadlights": false
+            },
+            "ignitionTime": "5s",
+            "odometer": false,
+            "washerFluid": true,
+            "malfunctionIndicator": true,
+            "batteryLevel": 40,
+            "airConditioning": false,
+            "languageConfiguration": [
+                "English",
+                "Hindi"
+            ],
+            "mirror": "auto",
+            "childSafetyLock": true,
+            "topSpeedLimit": "210 km/h",
+            "climate": {
+                "climateControl": true,
+                "sunroof": false,
+                "defrost": true
+            },
+            "chime": true
+        },
+        {
+            "id": "6108bbfeda1166446cf87859",
+            "dealerId": "6107bc5365ec3ef3bca0d067",
+            "tankCapacity": "34 L",
+            "mediaInterface": "display",
+            "theftAlarm": true,
+            "pictureUrls": [
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*",
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*"
+            ],
+            "tripMeter": "analog",
+            "airBagCount": 4,
+            "description": "This is a car",
+            "price": 126433.0,
+            "color": "brown",
+            "vin": "6107bc53f0fa5df1b94d4ab9",
+            "brand": "Suzuki",
+            "model": "c100",
+            "year": "2020.0",
+            "vehicleType": "mini",
+            "fuelType": [
+                "diesel",
+                "petrol"
+            ],
+            "unitsFuelConsumption": "34 km/l",
+            "transmissionGearType": "manual",
+            "steeringWheelType": "power",
+            "vehicleSpeed": "189 km/h",
+            "horn": "air horn",
+            "powerTrainTorque": "100Nm",
+            "accelaration": "10m/s2",
+            "nightMode": true,
+            "isABS": true,
+            "wheelRadius": "50cm",
+            "wheelSpeed": "10km/h",
+            "light": {
+                "fog": false,
+                "hazard": true,
+                "parking": false,
+                "dynamicHighBeam": true,
+                "automaticHeadlights": true
+            },
+            "ignitionTime": "5s",
+            "odometer": true,
+            "washerFluid": false,
+            "malfunctionIndicator": false,
+            "batteryLevel": 40,
+            "airConditioning": true,
+            "languageConfiguration": [
+                "English",
+                "Hindi"
+            ],
+            "mirror": "manual",
+            "childSafetyLock": true,
+            "topSpeedLimit": "224 km/h",
+            "climate": {
+                "climateControl": false,
+                "sunroof": false,
+                "defrost": false
+            },
+            "chime": true
+        },
+        {
+            "id": "6108bbfeda1166446cf8785a",
+            "dealerId": "6107bc53ac906fd632e6a4d2",
+            "tankCapacity": "31 L",
+            "mediaInterface": "display",
+            "theftAlarm": true,
+            "pictureUrls": [
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*",
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*"
+            ],
+            "tripMeter": "analog",
+            "airBagCount": 4,
+            "description": "This is a car",
+            "price": 710003.0,
+            "color": "brown",
+            "vin": "6107bc53167219375d143bf9",
+            "brand": "Suzuki",
+            "model": "c100",
+            "year": "2002.0",
+            "vehicleType": "macro",
+            "fuelType": [
+                "diesel",
+                "petrol"
+            ],
+            "unitsFuelConsumption": "27 km/l",
+            "transmissionGearType": "auto",
+            "steeringWheelType": "power",
+            "vehicleSpeed": "191 km/h",
+            "horn": "air horn",
+            "powerTrainTorque": "100Nm",
+            "accelaration": "10m/s2",
+            "nightMode": false,
+            "isABS": true,
+            "wheelRadius": "50cm",
+            "wheelSpeed": "10km/h",
+            "light": {
+                "fog": false,
+                "hazard": false,
+                "parking": true,
+                "dynamicHighBeam": false,
+                "automaticHeadlights": false
+            },
+            "ignitionTime": "5s",
+            "odometer": false,
+            "washerFluid": false,
+            "malfunctionIndicator": false,
+            "batteryLevel": 40,
+            "airConditioning": false,
+            "languageConfiguration": [
+                "English",
+                "Hindi"
+            ],
+            "mirror": "manual",
+            "childSafetyLock": false,
+            "topSpeedLimit": "200 km/h",
+            "climate": {
+                "climateControl": true,
+                "sunroof": true,
+                "defrost": false
+            },
+            "chime": false
+        },
+        {
+            "id": "6108bbfeda1166446cf8785b",
+            "dealerId": "6107bc53818a3edf08039e31",
+            "tankCapacity": "21 L",
+            "mediaInterface": "display",
+            "theftAlarm": true,
+            "pictureUrls": [
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*",
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*"
+            ],
+            "tripMeter": "analog",
+            "airBagCount": 4,
+            "description": "This is a car",
+            "price": 215553.0,
+            "color": "brown",
+            "vin": "6107bc53aa18c63ec7c02539",
+            "brand": "Benz",
+            "model": "r200",
+            "year": "2011.0",
+            "vehicleType": "prius",
+            "fuelType": [
+                "diesel",
+                "petrol"
+            ],
+            "unitsFuelConsumption": "34 km/l",
+            "transmissionGearType": "manual",
+            "steeringWheelType": "power",
+            "vehicleSpeed": "202 km/h",
+            "horn": "air horn",
+            "powerTrainTorque": "100Nm",
+            "accelaration": "10m/s2",
+            "nightMode": true,
+            "isABS": true,
+            "wheelRadius": "50cm",
+            "wheelSpeed": "10km/h",
+            "light": {
+                "fog": true,
+                "hazard": false,
+                "parking": true,
+                "dynamicHighBeam": true,
+                "automaticHeadlights": true
+            },
+            "ignitionTime": "5s",
+            "odometer": false,
+            "washerFluid": true,
+            "malfunctionIndicator": true,
+            "batteryLevel": 40,
+            "airConditioning": true,
+            "languageConfiguration": [
+                "English",
+                "Hindi"
+            ],
+            "mirror": "auto",
+            "childSafetyLock": true,
+            "topSpeedLimit": "192 km/h",
+            "climate": {
+                "climateControl": false,
+                "sunroof": false,
+                "defrost": false
+            },
+            "chime": false
+        },
+        {
+            "id": "6108bbfeda1166446cf8785c",
+            "dealerId": "6107bc534437f9ca977765c1",
+            "tankCapacity": "28 L",
+            "mediaInterface": "display",
+            "theftAlarm": true,
+            "pictureUrls": [
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*",
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*"
+            ],
+            "tripMeter": "display",
+            "airBagCount": 5,
+            "description": "This is a car",
+            "price": 869411.0,
+            "color": "blue",
+            "vin": "6107bc53b290cf060eb52ff8",
+            "brand": "Benz",
+            "model": "c200",
+            "year": "2015.0",
+            "vehicleType": "prius",
+            "fuelType": [
+                "diesel",
+                "petrol"
+            ],
+            "unitsFuelConsumption": "24 km/l",
+            "transmissionGearType": "manual",
+            "steeringWheelType": "power",
+            "vehicleSpeed": "218 km/h",
+            "horn": "air horn",
+            "powerTrainTorque": "100Nm",
+            "accelaration": "10m/s2",
+            "nightMode": true,
+            "isABS": false,
+            "wheelRadius": "50cm",
+            "wheelSpeed": "10km/h",
+            "light": {
+                "fog": false,
+                "hazard": true,
+                "parking": true,
+                "dynamicHighBeam": true,
+                "automaticHeadlights": false
+            },
+            "ignitionTime": "5s",
+            "odometer": false,
+            "washerFluid": false,
+            "malfunctionIndicator": false,
+            "batteryLevel": 40,
+            "airConditioning": true,
+            "languageConfiguration": [
+                "English",
+                "Hindi"
+            ],
+            "mirror": "manual",
+            "childSafetyLock": false,
+            "topSpeedLimit": "203 km/h",
+            "climate": {
+                "climateControl": true,
+                "sunroof": true,
+                "defrost": false
+            },
+            "chime": true
+        },
+        {
+            "id": "6108bbfeda1166446cf8785d",
+            "dealerId": "6107bc530955106d123f0bfd",
+            "tankCapacity": "25 L",
+            "mediaInterface": "display",
+            "theftAlarm": false,
+            "pictureUrls": [
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*",
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*"
+            ],
+            "tripMeter": "analog",
+            "airBagCount": 6,
+            "description": "This is a car",
+            "price": 352814.0,
+            "color": "green",
+            "vin": "6107bc53c740d8bc6340de6e",
+            "brand": "BMW",
+            "model": "c100",
+            "year": "2006.0",
+            "vehicleType": "macro",
+            "fuelType": [
+                "diesel",
+                "petrol"
+            ],
+            "unitsFuelConsumption": "34 km/l",
+            "transmissionGearType": "manual",
+            "steeringWheelType": "power",
+            "vehicleSpeed": "189 km/h",
+            "horn": "air horn",
+            "powerTrainTorque": "100Nm",
+            "accelaration": "10m/s2",
+            "nightMode": true,
+            "isABS": true,
+            "wheelRadius": "50cm",
+            "wheelSpeed": "10km/h",
+            "light": {
+                "fog": true,
+                "hazard": true,
+                "parking": false,
+                "dynamicHighBeam": true,
+                "automaticHeadlights": true
+            },
+            "ignitionTime": "5s",
+            "odometer": true,
+            "washerFluid": false,
+            "malfunctionIndicator": true,
+            "batteryLevel": 40,
+            "airConditioning": false,
+            "languageConfiguration": [
+                "English",
+                "Hindi"
+            ],
+            "mirror": "manual",
+            "childSafetyLock": true,
+            "topSpeedLimit": "239 km/h",
+            "climate": {
+                "climateControl": false,
+                "sunroof": true,
+                "defrost": false
+            },
+            "chime": false
+        },
+        {
+            "id": "6108bbfeda1166446cf8785e",
+            "dealerId": "6107bc5368016d4b63561294",
+            "tankCapacity": "32 L",
+            "mediaInterface": "display",
+            "theftAlarm": true,
+            "pictureUrls": [
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*",
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*"
+            ],
+            "tripMeter": "display",
+            "airBagCount": 4,
+            "description": "This is a car",
+            "price": 350400.0,
+            "color": "green",
+            "vin": "6107bc5301d7e95434cd99bc",
+            "brand": "Suzuki",
+            "model": "c200",
+            "year": "2018.0",
+            "vehicleType": "mini",
+            "fuelType": [
+                "diesel",
+                "petrol"
+            ],
+            "unitsFuelConsumption": "32 km/l",
+            "transmissionGearType": "auto",
+            "steeringWheelType": "power",
+            "vehicleSpeed": "156 km/h",
+            "horn": "air horn",
+            "powerTrainTorque": "100Nm",
+            "accelaration": "10m/s2",
+            "nightMode": true,
+            "isABS": true,
+            "wheelRadius": "50cm",
+            "wheelSpeed": "10km/h",
+            "light": {
+                "fog": true,
+                "hazard": true,
+                "parking": true,
+                "dynamicHighBeam": true,
+                "automaticHeadlights": true
+            },
+            "ignitionTime": "5s",
+            "odometer": true,
+            "washerFluid": true,
+            "malfunctionIndicator": false,
+            "batteryLevel": 40,
+            "airConditioning": true,
+            "languageConfiguration": [
+                "English",
+                "Hindi"
+            ],
+            "mirror": "manual",
+            "childSafetyLock": false,
+            "topSpeedLimit": "130 km/h",
+            "climate": {
+                "climateControl": false,
+                "sunroof": true,
+                "defrost": false
+            },
+            "chime": true
+        },
+        {
+            "id": "6108bbfeda1166446cf8785f",
+            "dealerId": "6107bc53aff205a6b49d2204",
+            "tankCapacity": "34 L",
+            "mediaInterface": "button",
+            "theftAlarm": false,
+            "pictureUrls": [
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*",
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*"
+            ],
+            "tripMeter": "display",
+            "airBagCount": 6,
+            "description": "This is a car",
+            "price": 103188.0,
+            "color": "blue",
+            "vin": "6107bc5346963fb0f15f2f80",
+            "brand": "BMW",
+            "model": "s200",
+            "year": "2009.0",
+            "vehicleType": "SUV",
+            "fuelType": [
+                "diesel",
+                "petrol"
+            ],
+            "unitsFuelConsumption": "28 km/l",
+            "transmissionGearType": "manual",
+            "steeringWheelType": "power",
+            "vehicleSpeed": "212 km/h",
+            "horn": "air horn",
+            "powerTrainTorque": "100Nm",
+            "accelaration": "10m/s2",
+            "nightMode": false,
+            "isABS": false,
+            "wheelRadius": "50cm",
+            "wheelSpeed": "10km/h",
+            "light": {
+                "fog": true,
+                "hazard": false,
+                "parking": false,
+                "dynamicHighBeam": false,
+                "automaticHeadlights": true
+            },
+            "ignitionTime": "5s",
+            "odometer": true,
+            "washerFluid": true,
+            "malfunctionIndicator": true,
+            "batteryLevel": 40,
+            "airConditioning": true,
+            "languageConfiguration": [
+                "English",
+                "Hindi"
+            ],
+            "mirror": "manual",
+            "childSafetyLock": true,
+            "topSpeedLimit": "214 km/h",
+            "climate": {
+                "climateControl": false,
+                "sunroof": true,
+                "defrost": false
+            },
+            "chime": true
+        },
+        {
+            "id": "6108bbfeda1166446cf87860",
+            "dealerId": "6107bc53e0c9eef10b54dd14",
+            "tankCapacity": "38 L",
+            "mediaInterface": "display",
+            "theftAlarm": true,
+            "pictureUrls": [
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*",
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*"
+            ],
+            "tripMeter": "analog",
+            "airBagCount": 5,
+            "description": "This is a car",
+            "price": 178455.0,
+            "color": "blue",
+            "vin": "6107bc53f170eb67c9daaed4",
+            "brand": "Audi",
+            "model": "r200",
+            "year": "2015.0",
+            "vehicleType": "deluxe",
+            "fuelType": [
+                "diesel",
+                "petrol"
+            ],
+            "unitsFuelConsumption": "22 km/l",
+            "transmissionGearType": "auto",
+            "steeringWheelType": "power",
+            "vehicleSpeed": "223 km/h",
+            "horn": "air horn",
+            "powerTrainTorque": "100Nm",
+            "accelaration": "10m/s2",
+            "nightMode": true,
+            "isABS": true,
+            "wheelRadius": "50cm",
+            "wheelSpeed": "10km/h",
+            "light": {
+                "fog": false,
+                "hazard": true,
+                "parking": false,
+                "dynamicHighBeam": true,
+                "automaticHeadlights": true
+            },
+            "ignitionTime": "5s",
+            "odometer": true,
+            "washerFluid": true,
+            "malfunctionIndicator": true,
+            "batteryLevel": 40,
+            "airConditioning": false,
+            "languageConfiguration": [
+                "English",
+                "Hindi"
+            ],
+            "mirror": "manual",
+            "childSafetyLock": false,
+            "topSpeedLimit": "164 km/h",
+            "climate": {
+                "climateControl": false,
+                "sunroof": false,
+                "defrost": true
+            },
+            "chime": false
+        },
+        {
+            "id": "6108bbfeda1166446cf87861",
+            "dealerId": "6107bc539a6d54bc8bbec9d7",
+            "tankCapacity": "25 L",
+            "mediaInterface": "button",
+            "theftAlarm": false,
+            "pictureUrls": [
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*",
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*"
+            ],
+            "tripMeter": "display",
+            "airBagCount": 5,
+            "description": "This is a car",
+            "price": 457738.0,
+            "color": "brown",
+            "vin": "6107bc53e5b62b2b2af2feb1",
+            "brand": "Suzuki",
+            "model": "r200",
+            "year": "2010.0",
+            "vehicleType": "macro",
+            "fuelType": [
+                "diesel",
+                "petrol"
+            ],
+            "unitsFuelConsumption": "32 km/l",
+            "transmissionGearType": "manual",
+            "steeringWheelType": "power",
+            "vehicleSpeed": "174 km/h",
+            "horn": "air horn",
+            "powerTrainTorque": "100Nm",
+            "accelaration": "10m/s2",
+            "nightMode": false,
+            "isABS": true,
+            "wheelRadius": "50cm",
+            "wheelSpeed": "10km/h",
+            "light": {
+                "fog": false,
+                "hazard": true,
+                "parking": true,
+                "dynamicHighBeam": false,
+                "automaticHeadlights": false
+            },
+            "ignitionTime": "5s",
+            "odometer": true,
+            "washerFluid": false,
+            "malfunctionIndicator": false,
+            "batteryLevel": 40,
+            "airConditioning": true,
+            "languageConfiguration": [
+                "English",
+                "Hindi"
+            ],
+            "mirror": "auto",
+            "childSafetyLock": false,
+            "topSpeedLimit": "111 km/h",
+            "climate": {
+                "climateControl": false,
+                "sunroof": true,
+                "defrost": true
+            },
+            "chime": true
+        },
+        {
+            "id": "6108bbfeda1166446cf87862",
+            "dealerId": "6107bc537588f8291432ca8b",
+            "tankCapacity": "36 L",
+            "mediaInterface": "display",
+            "theftAlarm": false,
+            "pictureUrls": [
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*",
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*"
+            ],
+            "tripMeter": "display",
+            "airBagCount": 5,
+            "description": "This is a car",
+            "price": 402771.0,
+            "color": "blue",
+            "vin": "6107bc53778ce13f09f6168f",
+            "brand": "Audi",
+            "model": "s200",
+            "year": "2008.0",
+            "vehicleType": "SUV",
+            "fuelType": [
+                "diesel",
+                "petrol"
+            ],
+            "unitsFuelConsumption": "22 km/l",
+            "transmissionGearType": "auto",
+            "steeringWheelType": "power",
+            "vehicleSpeed": "232 km/h",
+            "horn": "air horn",
+            "powerTrainTorque": "100Nm",
+            "accelaration": "10m/s2",
+            "nightMode": false,
+            "isABS": true,
+            "wheelRadius": "50cm",
+            "wheelSpeed": "10km/h",
+            "light": {
+                "fog": false,
+                "hazard": true,
+                "parking": false,
+                "dynamicHighBeam": true,
+                "automaticHeadlights": true
+            },
+            "ignitionTime": "5s",
+            "odometer": true,
+            "washerFluid": true,
+            "malfunctionIndicator": false,
+            "batteryLevel": 40,
+            "airConditioning": false,
+            "languageConfiguration": [
+                "English",
+                "Hindi"
+            ],
+            "mirror": "manual",
+            "childSafetyLock": false,
+            "topSpeedLimit": "164 km/h",
+            "climate": {
+                "climateControl": true,
+                "sunroof": true,
+                "defrost": true
+            },
+            "chime": true
+        },
+        {
+            "id": "6108bbfeda1166446cf87863",
+            "dealerId": "6107bc53ad27166c6961586e",
+            "tankCapacity": "37 L",
+            "mediaInterface": "display",
+            "theftAlarm": false,
+            "pictureUrls": [
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*",
+                "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*"
+            ],
+            "tripMeter": "analog",
+            "airBagCount": 6,
+            "description": "This is a car",
+            "price": 658047.0,
+            "color": "green",
+            "vin": "6107bc538c0bc98c75441110",
+            "brand": "Honda",
+            "model": "r200",
+            "year": "2004.0",
+            "vehicleType": "prius",
+            "fuelType": [
+                "diesel",
+                "petrol"
+            ],
+            "unitsFuelConsumption": "40 km/l",
+            "transmissionGearType": "manual",
+            "steeringWheelType": "power",
+            "vehicleSpeed": "240 km/h",
+            "horn": "air horn",
+            "powerTrainTorque": "100Nm",
+            "accelaration": "10m/s2",
+            "nightMode": false,
+            "isABS": true,
+            "wheelRadius": "50cm",
+            "wheelSpeed": "10km/h",
+            "light": {
+                "fog": true,
+                "hazard": false,
+                "parking": false,
+                "dynamicHighBeam": false,
+                "automaticHeadlights": false
+            },
+            "ignitionTime": "5s",
+            "odometer": false,
+            "washerFluid": true,
+            "malfunctionIndicator": false,
+            "batteryLevel": 40,
+            "airConditioning": true,
+            "languageConfiguration": [
+                "English",
+                "Hindi"
+            ],
+            "mirror": "auto",
+            "childSafetyLock": false,
+            "topSpeedLimit": "193 km/h",
+            "climate": {
+                "climateControl": false,
+                "sunroof": false,
+                "defrost": true
+            },
+            "chime": true
+        }
+    ],
+    "pageable": {
+        "sort": {
+            "sorted": false,
+            "unsorted": true,
+            "empty": true
+        },
+        "offset": 0,
+        "pageNumber": 0,
+        "pageSize": 12,
+        "paged": true,
+        "unpaged": false
+    },
+    "last": true,
+    "totalPages": 2,
+    "totalElements": 153,
+    "size": 12,
+    "number": 0,
+    "first": true,
+    "sort": {
+        "sorted": false,
+        "unsorted": true,
+        "empty": true
+    },
+    "numberOfElements": 12,
+    "empty": false
+}

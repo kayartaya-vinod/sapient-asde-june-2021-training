@@ -1,0 +1,21 @@
+@startuml
+
+Phone <|- MobilePhone
+MobilePhone <|- SmartPhone
+
+Camera <|.. SmartPhone
+Radio <|.. SmartPhone
+VideoPlayer <|.. SmartPhone
+Phone <|- FixedLinePhone
+
+Computer <|- Laptop
+Camera <|.. Laptop
+
+interface Camera
+interface Radio
+interface VideoPlayer
+
+Computer *-- Processor
+Computer *-- Memory
+
+@enduml

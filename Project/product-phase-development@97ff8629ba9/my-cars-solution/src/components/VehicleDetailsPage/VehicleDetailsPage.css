@@ -1,0 +1,18 @@
+/**
+@Author Sakshi Yadav - sakshi.yadav@publicissapient.com 
+*/
+
+.p{
+    text-align: center;
+    font-weight: bold;
+}
+.q{
+    text-align: center; 
+}
+
+.im{
+    display: block;
+    margin: auto auto;
+    width: 25%;
+    height:auto;
+}

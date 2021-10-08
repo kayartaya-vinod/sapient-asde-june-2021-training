@@ -1,0 +1,14 @@
+@startuml
+
+interface Shape{
+    +getArea(): double
+}
+
+Shape <|.. Triangle
+Shape <|.. Circle
+Shape <|.. Rectangle
+Shape <|.. Pentagon
+
+App -> Shape
+
+@enduml

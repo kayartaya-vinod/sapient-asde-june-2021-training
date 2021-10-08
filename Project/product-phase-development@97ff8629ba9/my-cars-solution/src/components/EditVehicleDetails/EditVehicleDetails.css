@@ -1,0 +1,42 @@
+/**
+@Author Sumitesh Naithani - sumitesh.naithani@publicissapient.com 
+*/
+
+.p{
+    text-align: center;
+    font-weight: bold;
+}
+.q{
+    text-align: center; 
+}
+
+.im{
+    display: block;
+    margin: auto auto;
+    width: 25%;
+    height:auto;
+}
+
+.center{
+    margin-left: 45%;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  font-size: 0.9rem;
+  padding: 2px;
+  
+}
+
+.btn-box {
+    padding-left: 10px;
+}
+
+.plus{
+    background-color: rgb(149, 248, 149);
+}
+
+.delete{
+    background-color:rgb(212, 99, 99);
+}

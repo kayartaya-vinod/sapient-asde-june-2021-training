@@ -1,0 +1,18 @@
+.rectangle-drop-box{
+        border: 1px dotted black;
+        height: 10rem;
+        text-align: center;
+}
+
+.messageBox{
+        width: 100%;
+        line-height: 1.8rem;
+}
+.messageRow{
+        border: 1px dotted;
+        padding: 1rem;
+}
+
+.xButton{
+        cursor: pointer;
+}

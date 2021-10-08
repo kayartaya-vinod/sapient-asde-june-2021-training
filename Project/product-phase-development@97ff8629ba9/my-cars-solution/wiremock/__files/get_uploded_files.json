@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "id": "id123",
+      "dealerId": "d123",
+      "date": "02-01-2021",
+      "time": "10:39 AM",
+      "totalVehicle": "2",
+      "successRatio": "0.4"
+    },
+    {
+      "id": "id124",
+      "dealerId": "d123",
+      "date": "12-01-2021",
+      "time": "09:39 AM",
+      "totalVehicle": "3",
+      "successRatio": "1.2"
+    },
+    {
+      "id": "id125",
+      "dealerId": "d123",
+      "date": "10-02-2021",
+      "time": "05:39 PM",
+      "totalVehicle": "4",
+      "successRatio": "1.0"
+    }
+  ]
+}

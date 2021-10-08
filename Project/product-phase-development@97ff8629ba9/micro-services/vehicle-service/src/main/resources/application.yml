@@ -1,0 +1,97 @@
+# Parameters
+# PORT -> Port of customer service
+# DB_NAME -> Mongo db name
+# DB_URL -> Mongo db URL
+# DB_PORT -> Mongo db port
+# EUREKA_URL -> URL of eureka service
+# EUREKA_PORT -> Port of eureka service
+# ACTUATOR_PORT -> Port on which actuator should run
+# AUTH_URL -> URL of auth service
+# AUTH_PORT -> Port of auth service
+
+server:
+    port: ${PORT:8097}
+
+spring:
+    application:
+        name: vehicle-service
+
+    data:
+        mongodb:
+            username: admin
+            password: Welcome#123
+            database: ${DB_NAME:mycarsolution}
+            host: ${DB_URL:54.234.219.42}
+            port: ${DB_PORT:27017}
+    redis:
+        port: ${REDIS_PORT:6379}
+        host: ${REDIS_HOST:localhost}
+        jedis:
+            pool:
+                maxActive: -1 # no limit to the number of active connections
+                maxWait: 30000 # time limit to get a connection - only applies if maxActive is finite
+
+eureka:
+    client:
+        fetchRegistry: true
+        registerWithEureka: true
+        serviceUrl:
+            defaultZone: http://${EUREKA_URL:localhost}:${EUREKA_PORT:8761}/eureka/
+    instance:
+        hostname: ${EUREKA_URL:localhost}
+        prefer-ip-address: true
+
+
+management:
+    metrics:
+        tags:
+            application: vehicle-service
+
+    endpoint:
+        health:
+            show-details: always
+
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+            base-path: /api/vehicles/metrics
+
+opentracing:
+    jaeger:
+        service-name: Jaeger-VehicleService
+        enabled: true
+        udp-sender:
+            host: ${JAEGER_HOST:localhost}
+            port: ${JAEGER_PORT:6831}
+
+authVerifyUrl: http://${AUTH_URL:localhost}:${AUTH_PORT:8095}/api/auth/verify
+custUrl: http://${CUST_URL:localhost}:${CUST_PORT:8096}/api/users?q=
+mongodbUrl: mongodb://admin:Welcome#123@${DB_URL:54.234.219.42}:${DB_PORT:27017}
+
+vehicle:
+    attributes:
+        basicInformation:
+            - brand
+            - model
+            - price
+            - vehicleType
+            - year
+            - airConditioning
+            - fuelType
+        performance:
+            - topSpeedLimit
+            - tankCapacity
+            - unitsFuelConsumption
+            - wheelSpeed
+            - ignitionTime
+            - accelaration
+            - powerTrainTorque
+            - batteryLevel
+        safety:
+            - theftAlarm
+            - airBagCount
+            - nightMode
+            - childSafetyLock
+            - malfunctionIndicator
+            - isABS

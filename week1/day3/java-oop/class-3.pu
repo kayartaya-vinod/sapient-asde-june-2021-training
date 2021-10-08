@@ -1,0 +1,9 @@
+@startuml
+
+
+Department o-- Employee: has zero or more
+
+Employee o-- Employee: reports to manager
+
+EmployeeDao -> Employee
+@enduml

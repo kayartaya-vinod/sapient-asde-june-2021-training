@@ -1,0 +1,66 @@
+@startuml
+
+class App {
+    + static main(args: String[]): void
+}
+interface ApplicationContext
+
+interface ProductDao{
+    + addProduct(product: Product): void
+    + getProduct(id: Integer): Product
+    + updateProduct(product: Product): void
+    + deleteProduct(id: Integer): void
+    + getAll(): List<Product>
+    + getByPriceRange(min: Double, max: Double): List<Product>
+}
+' class JdbcProductDao{
+'     - dataSource: DataSource
+'     + addProduct(product: Product): void
+'     + getProduct(id: Integer): Product
+'     + updateProduct(product: Product): void
+'     + deleteProduct(id: Integer): void
+'     + getAll(): List<Product>
+'     + getByPriceRange(min: Double, max: Double): List<Product>
+' }
+class JpaProductDao{
+    - em: EntityManager
+    + addProduct(product: Product): void
+    + getProduct(id: Integer): Product
+    + updateProduct(product: Product): void
+    + deleteProduct(id: Integer): void
+    + getAll(): List<Product>
+    + getByPriceRange(min: Double, max: Double): List<Product>
+}
+class MongodbProductDao{
+    - mc: MongoClient
+    + addProduct(product: Product): void
+    + getProduct(id: Integer): Product
+    + updateProduct(product: Product): void
+    + deleteProduct(id: Integer): void
+    + getAll(): List<Product>
+    + getByPriceRange(min: Double, max: Double): List<Product>
+}
+interface EntityManager
+' interface DataSource
+
+App -> ProductDao:  uses
+' DataSource <- JdbcProductDao: depends on
+' ProductDao <|.. JdbcProductDao
+ProductDao <|.. JpaProductDao: implements
+ProductDao <|.. MongodbProductDao: implements
+
+interface MongoClient
+MongoClient <-- MongodbProductDao: depends on
+
+ApplicationContext <-App : uses
+
+EntityManager <-- JpaProductDao: depends on
+
+' ApplicationContext -> JdbcProductDao: manufactures
+AnnotationConfigApplicationContext --> JpaProductDao: manufactures
+AnnotationConfigApplicationContext --> MongodbProductDao: manufactures
+ApplicationContext <|... AnnotationConfigApplicationContext: implements
+
+AppConfig -> EntityManager: defines bean for
+AppConfig -> MongoClient: defines bean for
+@enduml

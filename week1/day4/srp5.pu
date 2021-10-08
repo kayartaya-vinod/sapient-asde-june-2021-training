@@ -1,0 +1,46 @@
+@startuml
+
+
+interface Phone {
+    + abstract call(): void
+    + abstract addContact(): void
+}
+
+interface Camera {
+    + abstract takePhoto(): void
+}
+
+interface VideoRecorder {
+    + abstract recordVideo(): void
+}
+
+interface SmartPhone
+
+Phone <|-- SmartPhone
+Camera <|-- SmartPhone
+VideoRecorder <|-- SmartPhone
+
+Phone <|.. CheapPhone
+SmartPhone <|.. GoodPhone
+SmartPhone <|.. BetterPhone
+
+
+class GoodPhone {
+    + call(): void
+    + addContact(): void
+    + takePhoto(): void
+    + recordVideo(): void
+}
+
+class BetterPhone {
+    + call(): void
+    + addContact(): void
+    + takePhoto(): void
+    + recordVideo(): void
+}
+
+class CheapPhone {
+    + call(): void
+    + addContact(): void
+}
+@enduml

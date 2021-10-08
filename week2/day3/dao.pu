@@ -1,0 +1,26 @@
+@startuml
+
+interface ProductDao {
+    + add(product: Product): void
+    + get(id: Integer): Product
+    + update(product: Product): void
+    + delete(id: Integer): void
+    + getAll(): List<Product>
+    + getByPriceRange(min: Double, max: Double): List<Product>
+    + getByCategory(category: String): List<Product>
+}
+
+class ProductDaoJpaImpl {
+    - getEntityManager(): EntityManger
+    + add(product: Product): void
+    + get(id: Integer): Product
+    + update(product: Product): void
+    + delete(id: Integer): void
+    + getAll(): List<Product>
+    + getByPriceRange(min: Double, max: Double): List<Product>
+    + getByCategory(category: String): List<Product>
+}
+
+
+ProductDao <|.. ProductDaoJpaImpl
+@enduml

@@ -1,0 +1,12 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/api/vehicles/reviews?q=aksdsdad45da5a1sd3"
+    },
+    "response": {
+        "status": 404,
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+GET /springmvc-rest/api/hello
+Host: localhost:8080
+
+### 
+GET /springmvc-rest/api/info
+Host: localhost:8080
+Accept: application/json
+
+### 
+GET /springmvc-rest/api/persons
+Host: localhost:8080
+Accept: application/json
+
+### 
+GET /springmvc-rest/api/persons
+Host: localhost:8080
+Accept: application/xml
+
+### 
+GET /springmvc-rest/api/persons/23
+Host: localhost:8080
+Accept: application/json
+
+### 
+GET /springmvc-rest/api/persons/23
+Host: localhost:8080
+Accept: application/xml

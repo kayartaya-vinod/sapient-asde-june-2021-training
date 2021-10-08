@@ -1,0 +1,80 @@
+pipeline {
+    agent any
+
+    environment {
+        ORG_NAME = "sapient"
+        APP_NAME = "eureka-service"
+        APP_VERSION = "0.0.1-SNAPSHOT"
+        APP_CONTEXT_ROOT = "./micro-services/eureka-service"
+        APP_LISTENING_PORT = "8761"
+        TEST_CONTAINER_NAME = "ci-${APP_NAME}-${BUILD_NUMBER}"
+        SPRINT_RELEASE_NUM = "4"
+    }
+
+    tools {
+        maven "MAVEN"
+        dockerTool "DOCKER"
+    }
+
+    stages{
+
+        stage('compile'){
+            steps {
+                dir("${APP_CONTEXT_ROOT}") {
+                    echo 'compiling...'
+                    sh 'mvn clean compile'
+                }
+            }
+        }
+
+       
+        stage('build'){
+            steps {
+                dir("${APP_CONTEXT_ROOT}") {
+                    echo 'creating jar...'
+                    sh 'mvn package -DskipTests=true'
+                    archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+                }
+            }
+        }
+
+        // stage('dockerize'){
+        //     steps {
+        //         dir("${APP_CONTEXT_ROOT}") {
+        //             echo 'creating docker image...'
+        //             sh "docker build -t ${ORG_NAME}/${APP_NAME}:${APP_VERSION} -t ${ORG_NAME}/${APP_NAME}:latest --build-arg APP_NAME=${APP_NAME}-${APP_VERSION}.jar  --build-arg PORT=${APP_LISTENING_PORT} ."
+        //         } 
+        //     }
+        // }
+
+        // stage('docker test container'){
+        //     steps {
+        //         echo 'booting up docker test container...'
+        //         sh "docker run -dp ${APP_LISTENING_PORT}:${APP_LISTENING_PORT} --name ${TEST_CONTAINER_NAME} --rm ${ORG_NAME}/${APP_NAME}:latest"
+        //     }
+        // }
+        stage('image - create and push-ecr') {
+            steps {
+                sh "echo pushing image to ecr..."
+                script {
+                    dir("${APP_CONTEXT_ROOT}") {
+                        def build = docker.build("153294646920.dkr.ecr.us-east-1.amazonaws.com/eureka-service:${SPRINT_RELEASE_NUM}.0.${BUILD_NUMBER}", ".")
+                    }
+                    withDockerRegistry(credentialsId: 'ecr:us-east-1:Deepthi_ECR_Creds', toolName: 'DOCKER',
+                    url: 'https://153294646920.dkr.ecr.us-east-1.amazonaws.com/eureka-service') {
+                    docker.image("153294646920.dkr.ecr.us-east-1.amazonaws.com/eureka-service:${SPRINT_RELEASE_NUM}.0.${BUILD_NUMBER}").push()
+                    docker.image("153294646920.dkr.ecr.us-east-1.amazonaws.com/eureka-service:${SPRINT_RELEASE_NUM}.0.${BUILD_NUMBER}").push('latest')
+                    }
+                }
+            }
+        }
+    }
+    post {
+        always {
+            // echo "removing docker test container..."
+            // sh "docker stop ${TEST_CONTAINER_NAME}"
+            echo "removing the workspace"
+            cleanWs()
+        }
+    }
+}

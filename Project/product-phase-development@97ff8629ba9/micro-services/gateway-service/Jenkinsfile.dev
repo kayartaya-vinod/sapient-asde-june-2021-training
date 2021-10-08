@@ -1,0 +1,95 @@
+pipeline {
+    agent any
+
+    environment {
+        ORG_NAME = "sapient"
+        APP_NAME = "gateway-service"
+        APP_VERSION = "0.0.1-SNAPSHOT"
+        APP_CONTEXT_ROOT = "./gateway-service"
+        APP_LISTENING_PORT = "8400"
+        TEST_CONTAINER_NAME = "ci-${APP_NAME}-${BUILD_NUMBER}"
+        DOCKER_HUB = credentials("${ORG_NAME}-credentials")
+    }
+
+    stages{
+
+        stage('install') {
+      steps {
+        dir("${APP_CONTEXT_ROOT}") {
+          echo 'installing dependencies'
+          bat 'node -v'
+          bat 'npm prune'
+          bat 'npm install'
+        }
+      }
+    }
+
+        stage('compile'){
+            steps {
+              dir("${APP_CONTEXT_ROOT}") {
+                  echo 'compiling...'
+                  bat 'mvn clean compile'
+                }
+            }
+        }
+
+      
+
+        stage('build'){
+            steps {
+             dir("${APP_CONTEXT_ROOT}") {
+                  echo 'creating jar...'
+                  bat 'mvn package -DskipTests=true'
+                  archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+                }
+            }  
+        }
+
+        stage('dockerize'){
+            steps {
+              dir("${APP_CONTEXT_ROOT}") {
+                    echo 'creating docker image...'
+                    bat "docker build -t ${ORG_NAME}/${APP_NAME}:${APP_VERSION} -t ${ORG_NAME}/${APP_NAME}:latest ."
+                }
+            }
+        }
+
+        stage('docker test container'){
+            steps {
+                echo 'booting up docker test container...'
+                bat "docker run -dp ${APP_LISTENING_PORT}:${APP_LISTENING_PORT} --name ${TEST_CONTAINER_NAME} --rm ${ORG_NAME}/${APP_NAME}:latest"
+            }
+        }
+
+      /**stage('performance test'){
+            steps {
+                echo 'testing for performance...'
+                bat "jmeter -n -t ./devops-demo.jmx -l ./target/devops-demo.jtl"
+                archiveArtifacts artifacts: 'target/*.jtl', fingerprint: true
+            }
+        }
+*///
+      
+
+        stage('publish docker image'){
+            /*when {
+                branch 'origin/neha'
+            }*/
+            steps {
+                echo 'publishing docker image to docker repository...'
+                withDockerRegistry([ credentialsId: "${ORG_NAME}-credentials", url: "" ]) {
+                    bat "docker push ${ORG_NAME}/${APP_NAME}:${APP_VERSION}"
+                    bat "docker push ${ORG_NAME}/${APP_NAME}:latest"
+                }
+            }
+        }
+    }
+    post {
+        always {
+            echo "removing docker test container..."
+            bat "docker stop ${TEST_CONTAINER_NAME}"
+            echo "removing the workspace"
+            cleanWs()
+        }
+    }
+}

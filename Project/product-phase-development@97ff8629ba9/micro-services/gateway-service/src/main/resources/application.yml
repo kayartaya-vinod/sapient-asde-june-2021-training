@@ -1,0 +1,75 @@
+server:
+    port: 8400
+
+spring:
+    application:
+        name: api-gateway-service
+
+    cloud:
+        discovery:
+            enabled: true
+
+        gateway:
+            globalcors:
+                corsConfigurations:
+                    "[/**]":
+                        allowedOrigins: "*"
+                        allowedMethods: "*"
+                        allowedHeaders: "*"
+            routes:
+                - id: customerService
+                  predicates:
+                      - Path=/api/customers/**, /api/users/**
+                  uri: lb://customer-service/
+
+                - id: authService
+                  predicates:
+                      - Path=/api/auth/**
+                  uri: lb://auth-service/
+
+                - id: emailService
+                  predicates:
+                      - Path=/api/mail/**
+                  uri: lb://email-service/
+
+                - id: vehicleService
+                  predicates:
+                      - Path=/api/vehicles/**
+                  uri: lb://vehicle-service/
+
+                - id: vehicleDataService
+                  predicates:
+                      - Path=/api/data/**
+                  uri: lb://vehicle-data-service/
+eureka:
+    client:
+        fetchRegistry: true
+        registerWithEureka: true
+        serviceUrl:
+            defaultZone: http://${EUREKA_URL:localhost}:${EUREKA_PORT:8761}/eureka/
+    instance:
+        hostname: ${EUREKA_URL:localhost}
+        prefer-ip-address: true
+
+
+management:
+    metrics:
+        tags:
+            application: gateway-service
+
+    endpoint:
+        health:
+            show-details: always
+            
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+
+opentracing:
+    jaeger:
+        service-name: Jaeger-GatewayService
+        enabled: true
+        udp-sender:
+            host: ${JAEGER_HOST:localhost}
+            port: ${JAEGER_PORT:6831}

@@ -1,0 +1,25 @@
+http://localhost:8080/api/contacts
+
+###
+http://localhost:8080/api/contacts?_page=2
+
+###
+http://localhost:8080/api/contacts?_limit=5
+
+###
+http://localhost:8080/api/contacts?_limit=5&_page=2
+
+###
+
+POST /api/contacts
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "name": "Vinod Kumar",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "email": "vinod@vinod.co",
+    "phone": "9731424784",
+    "gender": "Male"
+}

@@ -1,0 +1,10 @@
+spring:
+    application:
+        name: ADDRESSBOOK-SERVICE
+    data:
+        mongodb:
+            host: localhost
+            port: 27017
+            database: trainingdb
+server:
+    port: 8080

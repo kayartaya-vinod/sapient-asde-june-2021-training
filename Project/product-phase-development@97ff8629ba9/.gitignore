@@ -1,0 +1,4 @@
+**/target
+**/node_modules
+**/config.tf
+config.tf

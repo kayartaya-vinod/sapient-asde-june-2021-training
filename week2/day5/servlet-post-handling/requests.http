@@ -1,0 +1,10 @@
+POST /servlet-post-handling/api/customers
+Host: localhost:8080
+Content-Type: text/plain
+Accept: text/plain
+
+{
+    "name": "Vinod",
+    "city": "Bangalore",
+    "email": "vinod@vinod"
+}

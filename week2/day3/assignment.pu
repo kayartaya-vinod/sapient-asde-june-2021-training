@@ -1,0 +1,35 @@
+@startuml
+
+Product "*" o-- "1" Category
+
+class Category{
+    -id: Integer
+    -name: String
+    -description: String
+    + {method} constructor
+    + {method} getters
+    + {method} setters
+}
+
+class Product{
+    -id: Integer
+    -name: String
+    -description: String
+    -price: Double
+    -category: Category
+    -pictures: List<Picture>
+    + {method} constructor
+    + {method} getters
+    + {method} setters
+}
+
+class Picture{
+    -id: Integer
+    -picturePath: String
+    + {method} constructor
+    + {method} getters
+    + {method} setters
+}
+Product "1" o- "*" Picture
+
+@enduml

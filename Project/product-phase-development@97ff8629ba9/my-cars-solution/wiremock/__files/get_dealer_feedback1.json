@@ -1,0 +1,72 @@
+{
+    "data": {
+        "feedbacks": [
+            {
+                "vehicleName": "Mercedes-Benz",
+                "Feedback": {
+                    "id": "6125342e430d19c28b31098d",
+                    "vehicleId": "1",
+                    "userId": "612497d6638c3a92700092d1",
+                    "review": "With the launch of the all-new A-Class Limousine, Mercedes-Benz has opened up a new entry point into the brand in India. Not only does this car replace the CLA sedan in India, but with the new-gen CLA, and A- and B-Class hatchbacks ruled out for our market, the A-Class Limousine will be the most affordable offering wearing the three-pointed star.",
+                    "rating": 4
+                },
+                "userName": "Xandar Arther"
+            },
+            {
+                "vehicleName": "Hyndai Tucson",
+                "Feedback": {
+                    "id": "612534b2430d19c28b31098e",
+                    "vehicleId": "1",
+                    "userId": "612497d6638c3a92700092d9",
+                    "review": "Hyundai redesigned the Tucson for 2022, and this new fourth-generation SUV is a major step forward. The 2022 Tucson is 6 inches longer than the outgoing model, and that translates to much more back-seat space and cargo room. The exterior is edgier and more distinctive, the cabin is far more upscale, and the infotainment system has a sleeker appearance. The suite of driver assistance features has also grown significantly.",
+                    "rating": 3
+                },
+                "userName": "Joe Mark"
+            }
+        ],
+        "page": {
+            "content": [
+                {
+                    "id": "6125342e430d19c28b31098d",
+                    "vehicleId": "1",
+                    "userId": "612497d6638c3a92700092d1",
+                    "review": "This is a comfortable car.Price is reasonable",
+                    "rating": 4
+                },
+                {
+                    "id": "612534b2430d19c28b31098e",
+                    "vehicleId": "1",
+                    "userId": "612497d6638c3a92700092d9",
+                    "review": "Super car,Looks great",
+                    "rating": 3
+                }
+            ],
+            "pageable": {
+                "sort": {
+                    "sorted": false,
+                    "unsorted": true,
+                    "empty": true
+                },
+                "offset": 0,
+                "pageNumber": 0,
+                "pageSize": 12,
+                "unpaged": false,
+                "paged": true
+            },
+            "last": true,
+            "totalElements": 2,
+            "totalPages": 1,
+            "size": 12,
+            "number": 0,
+            "sort": {
+                "sorted": false,
+                "unsorted": true,
+                "empty": true
+            },
+            "first": true,
+            "numberOfElements": 2,
+            "empty": false
+        }
+    },
+    "success": true
+}

@@ -1,0 +1,6 @@
+.review-textarea{
+    max-width:100%;
+    min-width: 100%;
+    resize:none;
+    border: 1px solid #aaa;
+}

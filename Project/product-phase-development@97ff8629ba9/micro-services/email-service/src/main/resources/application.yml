@@ -1,0 +1,63 @@
+# PORT -> Port on which the service is running
+# KAFKA_URL -> URL of kafka service
+# KAFKA_PORT -> Port of kafka service
+# KAFKA_TOPIC -> Kafka topic the service is subscribed to
+# EUREKA_URL -> URL of eureka service
+# EUREKA_PORT -> Port of eureka service
+# ACTUATOR_PORT -> Port on which actuator should run
+
+server:
+    port: ${PORT:8090}
+
+cloud:
+    aws:
+        region:
+            static: us-east-1
+
+spring:
+    application:
+        name: email-service
+    kafka:
+        consumer:
+            bootstrap-servers: "${KAFKA_URL:localhost}:${KAFKA_PORT:9092}"
+            key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+            value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+            group-id: report-group
+            auto-offset-reset: earliest
+
+eureka:
+    client:
+        fetchRegistry: true
+        registerWithEureka: true
+        serviceUrl:
+            defaultZone: http://${EUREKA_URL:localhost}:${EUREKA_PORT:8761}/eureka/
+    instance:
+        hostname: ${EUREKA_URL:localhost}
+        prefer-ip-address: true
+
+
+management:
+    metrics:
+        tags:
+            application: mail-service
+
+    endpoint:
+        health:
+            show-details: always
+
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+            base-path: /api/mail/metrics
+
+opentracing:
+    jaeger:
+        service-name: Jaeger-EmailService
+        enabled: true
+        udp-sender:
+            host: ${JAEGER_HOST:localhost}
+            port: ${JAEGER_PORT:6831}
+
+kafkaEmailTopic: ${KAFKA_TOPIC:send-email}
+sendEmailUsing: no-reply@mycarsolutions.net

@@ -1,0 +1,22 @@
+server:
+    port: 80
+
+spring:
+    application:
+        name: GATEWAY-SERVICE
+    cloud:
+        gateway:
+            routes:
+                - id: productService
+                  predicates:
+                      - Path=/api/products/**
+                  uri: lb://PRODUCT-SERVICE/
+
+                - id: customerService
+                  predicates:
+                      - Path=/api/customers/**
+                  uri: lb://CUSTOMER-SERVICE/
+
+DOCK
+    instance:
+        hostname: localhost

@@ -1,0 +1,67 @@
+pipeline {
+    agent any
+
+    environment {
+        ORG_NAME = "sapient"
+        APP_NAME = "gateway-service"
+        APP_VERSION = "0.0.1-SNAPSHOT"
+        APP_CONTEXT_ROOT = "./micro-services/gateway-service"
+        APP_LISTENING_PORT = "8400"
+        TEST_CONTAINER_NAME = "ci-${APP_NAME}-${BUILD_NUMBER}"
+        SPRINT_RELEASE_NUM = "4"
+    }
+
+    tools {
+        maven "MAVEN"
+        dockerTool "DOCKER"
+    }
+
+
+    stages{
+
+        stage('compile'){
+            steps {
+                dir("${APP_CONTEXT_ROOT}") {
+                    echo 'compiling...'
+                    sh 'mvn clean compile'
+                }
+
+            }
+        }
+
+        stage('build'){
+            steps {
+                dir("${APP_CONTEXT_ROOT}") {
+                    echo 'creating jar...'
+                    sh 'mvn package -DskipTests=true'
+                    archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+                }
+            }
+        }
+
+         stage('image - create and push-ecr') {
+            steps {
+                sh "echo pushing image to ecr..."
+                script {
+                    dir("${APP_CONTEXT_ROOT}") {
+                        def build = docker.build("153294646920.dkr.ecr.us-east-1.amazonaws.com/gateway-service:${SPRINT_RELEASE_NUM}.0.${BUILD_NUMBER}", ".")
+                    }
+                    withDockerRegistry(credentialsId: 'ecr:us-east-1:Deepthi_ECR_Creds', toolName: 'DOCKER',
+                    url: 'https://153294646920.dkr.ecr.us-east-1.amazonaws.com/gateway-service') {
+                    docker.image("153294646920.dkr.ecr.us-east-1.amazonaws.com/gateway-service:${SPRINT_RELEASE_NUM}.0.${BUILD_NUMBER}").push()
+                    docker.image("153294646920.dkr.ecr.us-east-1.amazonaws.com/gateway-service:${SPRINT_RELEASE_NUM}.0.${BUILD_NUMBER}").push('latest')
+                    }
+                }
+            }
+        }
+     
+    }
+    post {
+        always {
+            // echo "removing docker test container..."
+            // sh "docker stop ${TEST_CONTAINER_NAME}"
+            echo "removing the workspace"
+            cleanWs()
+        }
+    }
+}

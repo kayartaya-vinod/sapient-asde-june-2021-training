@@ -1,0 +1,4 @@
+GET /api/shopping/checkout/12000
+Host: localhost:8080
+
+################################

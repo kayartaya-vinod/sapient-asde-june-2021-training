@@ -1,0 +1,36 @@
+@startuml
+
+class Employee {
+    - id: int
+    - name: String
+    - salary: double
+
+    + {method} constructor
+    + {method} getters
+    + {method} setters
+}
+
+interface EmployeePersister {
+    + save(emp: Employee): void
+}
+
+EmployeePersister <|.. EmployeeDatabasePerisister
+EmployeePersister <|.. EmployeeXmlPerisister
+EmployeePersister <|.. EmployeeJsonPerisister
+
+Employee <-- EmployeeDatabasePerisister
+Employee <-- EmployeeXmlPerisister
+Employee <-- EmployeeJsonPerisister
+
+class EmployeeDatabasePerisister{
+    + save(emp: Employee): void
+}
+
+class EmployeeXmlPerisister{
+    + save(emp: Employee): void
+}
+
+class EmployeeJsonPerisister{
+    + save(emp: Employee): void
+}
+@enduml

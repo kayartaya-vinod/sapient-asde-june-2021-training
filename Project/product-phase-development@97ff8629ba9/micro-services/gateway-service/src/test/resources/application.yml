@@ -1,0 +1,41 @@
+server:
+    port: 8400
+
+spring:
+    application:
+        name: api-gateway-service
+
+    cloud:
+        discovery:
+            enabled: true
+
+        gateway:
+            globalcors:
+                corsConfigurations:
+                    '[/**]':
+                        allowedOrigins: '*'
+                        allowedMethods: '*'
+                        allowedHeaders: '*'
+            routes:
+                - id: customerService
+                  predicates:
+                      - Path=/api/customers/**
+                  uri: lb://customer-service/
+
+                - id: authService
+                  predicates:
+                      - Path=/api/auth/**
+                  uri: lb://auth-service/
+
+                - id: emailService
+                  predicates:
+                      - Path=/api/mail/**
+                  uri: lb://email-service/
+
+                - id: vehicleService
+                  predicates:
+                      - Path=/api/vehicles/**
+                  uri: lb://vehicle-service/
+eureka:
+    client:
+        enabled: false

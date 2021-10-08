@@ -1,0 +1,43 @@
+# Parameters
+# PORT -> Port of customer service
+# DB_NAME -> Mongo db name
+# DB_URL -> Mongo db URL
+# DB_PORT -> Mongo db port
+# EUREKA_URL -> URL of eureka service
+# EUREKA_PORT -> Port of eureka service
+# ACTUATOR_PORT -> Port on which actuator should run
+# AUTH_URL -> URL of auth service
+# AUTH_PORT -> Port of auth service
+
+
+server:
+    port: ${PORT:8097}
+
+spring:
+    application:
+        name: vehicle-service
+
+    data:
+        mongodb:
+            enabled: false
+    cache:
+        type: NONE
+
+eureka:
+    client:
+        enabled: false
+       
+
+        
+
+management:
+    server:
+        port: ${ACTUATOR_PORT:9875}
+
+    endpoints:
+        web:
+            exposure:
+                include: health,env,beans
+
+authVerifyUrl: http://${AUTH_URL:localhost}:${AUTH_PORT:8095}/api/auth/verify
+custUrl: http://${CUST_URL:localhost}:${CUST_PORT:8096}/api/users?q=

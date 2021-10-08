@@ -1,0 +1,15 @@
+{
+    "request":{
+      "method": "GET",
+      "url": "/api/vehicles/dealer/vehicle123"
+    },
+    "response":{
+       "status":200,
+        "headers":
+        {
+          "Content-Type": "application/json"
+         
+        },
+        "bodyFileName":"../__files/get_vehicle_response.json"
+    }
+}

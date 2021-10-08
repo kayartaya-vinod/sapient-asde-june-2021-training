@@ -1,0 +1,13 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/api/vehicles/advanced-search?brand=Maruti,Honda&min_price=500000&max_price=1000000"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "../__files/get_filteredVehicles_response.json",
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}

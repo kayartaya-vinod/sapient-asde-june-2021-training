@@ -1,0 +1,19 @@
+    {
+        "request": {
+            "method": "ANY",
+            "url": "/api/data/upload/csv"
+        },
+        "response": {
+            "status": 200,
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "jsonBody": {
+                "uploadRatio":"100%",
+                "dateandtime":"5:5:55",
+                "message":"File uploaded successfully",
+                "documentUploaded":"500",
+                "success": true
+            }
+        }
+    }

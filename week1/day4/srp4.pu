@@ -1,0 +1,30 @@
+@startuml
+
+
+interface Phone {
+    + abstract call(): void
+    + abstract addContact(): void
+    + abstract takePhoto(): void
+    + abstract recordVideo(): void
+}
+
+Phone <|.. GoodPhone
+Phone <|.. BetterPhone
+
+
+class GoodPhone {
+    + call(): void
+    + addContact(): void
+    + takePhoto(): void
+    + recordVideo(): void
+}
+
+class BetterPhone {
+    + call(): void
+    + addContact(): void
+    + takePhoto(): void
+    + recordVideo(): void
+}
+
+
+@enduml

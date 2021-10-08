@@ -1,0 +1,19 @@
+{
+    "request": {
+        "method":"POST",
+        "url":"/api/auth/verify-account",
+        "headers":{
+            "Accept":{"contains": "json"}
+        }
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json, text/plain, */*"
+        },
+        "jsonBody":{
+            "success": true,
+            "name" : "Jon Snow"
+        }
+    }
+}

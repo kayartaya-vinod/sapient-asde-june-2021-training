@@ -1,0 +1,165 @@
+GET /api/customers
+Host: localhost:8096
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJ6NGJNSWF5Tk9PMmtYNUlrSEZyZVFBPT0iLCJ1c2VyVHlwZSI6ImN1c3RvbWVyIiwiZXhwIjoxNjI5OTk5MzEwLCJ1c2VySWQiOiI2MTI2NTVjNWEyMjQyYjMzY2FjZjdiZjUiLCJpYXQiOjE2Mjk5MTI5MTAsImVtYWlsIjoiWC95K2dpT3lrdTdYaTVNRE9YQVJGQT09In0.cHqYxRVRxLwxSqK97ZBNRkY5G-GyDc7GgLJitQXxJAA
+
+
+
+###
+
+PUT /api/customers
+Host: localhost:8096
+Content-Type: application/json
+Authorization: JWT token
+
+{
+  "id": "123456",
+  "userId": "6100d91f84fb92454f024d36",
+  "alternateEmail": "rohit2@gmail.com",
+  "address": {
+      "default": {
+          "buildingNo": "55",
+          "street": "kali gali",
+          "landMark": "near tripathi bhawan",
+          "city": "mirzapur",
+          "state": "uttar pradesh",
+          "pinCode": "831313"
+      },
+      "anotherAddress": {
+          "buildingNo": "55",
+          "street": "kali gali",
+          "landMark": "near tripathi bhawan",
+          "city": "mirzapur",
+          "state": "uttar pradesh",
+          "pinCode": "831313"
+      }
+  },
+  "contactNo": "7898789878",
+  "alternateContactNo": "78987898752",
+  "wishlist": ["carid", "carid2"]
+}
+
+
+
+###
+PUT /api/customers
+Host: localhost:8096
+Content-Type: application/json
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJ6NGJNSWF5Tk9PMmtYNUlrSEZyZVFBPT0iLCJ1c2VyVHlwZSI6ImN1c3RvbWVyIiwiZXhwIjoxNjI5OTk5MzEwLCJ1c2VySWQiOiI2MTI2NTVjNWEyMjQyYjMzY2FjZjdiZjUiLCJpYXQiOjE2Mjk5MTI5MTAsImVtYWlsIjoiWC95K2dpT3lrdTdYaTVNRE9YQVJGQT09In0.cHqYxRVRxLwxSqK97ZBNRkY5G-GyDc7GgLJitQXxJAA
+
+{
+  "id":"612684b8a84faa4fd99fcac1",
+  "userId": "612655c5a2242b33cacf7bf5",
+  "alternateEmail": "rohit2@gmail.com",
+  "address": {
+      "default": {
+          "buildingNo": "55",
+          "street": "kali gali",
+          "landMark": "near tripathi bhawan",
+          "city": "mirzapur",
+          "state": "uttar pradesh",
+          "pinCode": "831313"
+      },
+      "anotherAddress": {
+          "buildingNo": "55",
+          "street": "kali gali",
+          "landMark": "near tripathi bhawan",
+          "city": "mirzapur",
+          "state": "uttar pradesh",
+          "pinCode": "831313"
+      }
+  },
+  "contactNo": "7898789878",
+  "alternateContactNo": "78987898752",
+  "wishlist": ["carid", "carid2"]
+}
+
+
+###
+PUT /api/customers
+Host: localhost:8096
+Content-Type: application/json
+
+{ 
+  "id": "123456",
+  "userId": "6100d91f84fb92454f024d36",
+  "alternateEmail": "rohit2@gmail.com",
+  "address": {
+      "default": {
+          "buildingNo": "55",
+          "street": "kali gali",
+          "landMark": "near tripathi bhawan",
+          "city": "mirzapur",
+          "state": "uttar pradesh",
+          "pinCode": "831313"
+      },
+      "anotherAddress": {
+          "buildingNo": "55",
+          "street": "kali gali",
+          "landMark": "near tripathi bhawan",
+          "city": "mirzapur",
+          "state": "uttar pradesh",
+          "pinCode": "831313"
+      }
+  },
+  "contactNo": "7898789878",
+  "alternateContactNo": "78987898752",
+  "wishlist": ["carid", "carid2"]
+}
+
+
+
+
+###
+
+POST /api/customers/change-password
+Host: localhost:8400
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiI3YjAzcXpiQlFZbFczYmlnWTZxRXhRPT0iLCJ1c2VyVHlwZSI6ImN1c3RvbWVyIiwiZXhwIjoxNjMwMTMzNjEyLCJ1c2VySWQiOiI2MTI4ODc0YzNkOTdlNjM4MGUzNGIwNTMiLCJpYXQiOjE2MzAwNDcyMTIsImVtYWlsIjoiSERqRGRUVjNhdHVrOXNnKzdxcDBtTjRjeG54RmsyNDFpMllVRk03MEp6QT0ifQ.Z1nYGjpOaiK6pSYsYIRcJZ-V9On5nAY51CWZxE19Gko
+Content-Type: application/json
+
+{"old_password":"Welcome#123","password":"Welcome#1234","confirm_password":"Welcome#1234"}
+
+
+###
+GET /api/customers/reset-password-link?email=vinod.kayartaya@publicissapient.com
+Host: localhost:8400
+
+###
+
+POST /api/auth/login
+Host: localhost:8400
+Content-Type: application/json
+
+{
+    "email": "maudehamilton@geekmosis.com",
+    "password": "password"
+}
+###
+
+Get /api/customers/favorites
+Host: localhost:8400
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJNYXVkZSIsInVzZXJUeXBlIjoiY3VzdG9tZXIiLCJleHAiOjE2Mjg5MzA0MjgsInVzZXJJZCI6IjYxMDY2OGM5OTczMTVlZjE3ZGE2MjJjNyIsImlhdCI6MTYyODg0NDAyOCwiZW1haWwiOiJtYXVkZWhhbWlsdG9uQGdlZWttb3Npcy5jb20ifQ.r_I9V2A2CUT9lbN_0ILhXE1Rg9I2ze8Jt4YTl1qj_-I
+Content-Type: application/json
+#######
+http://localhost:8097/api/vehicles/61091b47c9c367997b04b79c
+
+
+###
+PUT  /api/customers/favorites/6114d0333bf88f5822eeca91
+Host: localhost:8096
+Content-Type: application/json
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJUb3duc2VuZCIsInVzZXJUeXBlIjoiY3VzdG9tZXIiLCJleHAiOjE2MjkyNzI3ODYsInVzZXJJZCI6IjYxMDY2OGM5OTczMTVlZjE3ZGE2MjJjYyIsImlhdCI6MTYyOTE4NjM4NiwiZW1haWwiOiJjdXN0b21lckBkb21haW4uY29tIn0.H2HrDjByAyJgq2JXyA4b0gYVIr1dpapN_j5ASJ1Wh14
+
+###
+PUT  /api/customers/favorites/1
+Host: localhost:8400
+Content-Type: application/json
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJ1c2VyODMiLCJ1c2VyVHlwZSI6ImN1c3RvbWVyIiwiZXhwIjoxNjI5Mzk2NzU1LCJ1c2VySWQiOiI2MTFkNGMyNTcwZTg1ZDZhNjBkODVjMWYiLCJpYXQiOjE2MjkzMTAzNTUsImVtYWlsIjoidXNlcnVzZXJzQGdtYWlsLmNvbSJ9.akt1JYhD5XY-oz1EHSNurUlm6HRKYJOdqNaOuaWU8fc
+
+
+
+###
+POST /api/customers/add-customer/6128874c3d97e6380e34b053
+Host: localhost:8096
+Content-Type: application/json
+
+

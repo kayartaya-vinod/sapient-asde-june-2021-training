@@ -1,0 +1,21 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/api/vehicles/vehicle123/reviews",
+        "headers": {
+            "Accept": {
+                "contains": "json"
+            }
+        }
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json, text/plain, */*"
+        },
+        "jsonBody": {
+            "success": true,
+            "review": "This is the initial review!"
+        }
+    }
+}

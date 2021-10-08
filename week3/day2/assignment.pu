@@ -1,0 +1,31 @@
+@startuml
+
+Customer o- Address
+
+class Customer {
+    - id: String
+    - firstName: String
+    - lastName: String
+    - gender: String
+    - email: String
+    - phone: String
+    - address: Address
+    + {method} constructor
+    + {method} getters
+    + {method} setters
+
+}
+
+class Address {
+    - street: String
+    - city: String
+    - state: String
+    - postalCode: String
+    - country: String
+    + {method} constructor
+    + {method} getters
+    + {method} setters
+}
+
+note top of Address: This is not an entity class
+@enduml

@@ -1,0 +1,6 @@
+**/target
+**/node_modules
+**/*.class
+**/.DS_Store
+**/.settings
+**/.vscode

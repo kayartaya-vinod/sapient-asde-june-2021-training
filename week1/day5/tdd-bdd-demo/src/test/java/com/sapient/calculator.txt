@@ -1,0 +1,11 @@
+Method under test:
+
+--------------------------------
+int sum(String str);
+--------------------------------
+
+The function should return a number which is a sum of all the numbers (0, 1, or 2) in the string
+
+"1,2" -> 3
+"1" -> 1
+"" -> 0

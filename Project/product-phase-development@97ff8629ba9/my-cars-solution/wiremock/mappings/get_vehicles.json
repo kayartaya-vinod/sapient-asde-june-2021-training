@@ -1,0 +1,10 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/api/vehicles/?page=1"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "../__files/get_vehicles_response.json"
+    }
+}

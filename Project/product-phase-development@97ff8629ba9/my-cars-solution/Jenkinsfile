@@ -1,0 +1,97 @@
+pipeline{
+  agent any
+
+  environment {
+    ORG_NAME = "sapient"
+    APP_NAME = "my-cars-solution"
+    APP_VERSION = "0.0.1"
+    APP_CONTEXT_ROOT = "./my-cars-solution/"
+    APP_LISTENING_PORT = "3000"
+    TEST_CONTAINER_NAME = "ci-${APP_NAME}-${BUILD_NUMBER}"
+    SPRINT_RELEASE_NUM = "4"
+  }
+    
+  tools {
+    nodejs "NODEJS"
+    dockerTool "DOCKER"
+  }
+
+  stages{
+    stage('install') {
+      steps {
+        dir("${APP_CONTEXT_ROOT}") {
+          echo 'installing dependencies'
+          sh 'node -v'
+          sh 'npm install'
+        }
+      }
+    }
+
+    stage('test'){
+      steps {
+        dir("${APP_CONTEXT_ROOT}") {
+          echo 'tests...'
+          sh 'npm test'
+        }
+      }
+    }
+
+       stage('build'){
+           steps {
+                dir("${APP_CONTEXT_ROOT}") {
+                      echo 'creating build file...'
+                      sh 'npm run build'
+                      zip zipFile: 'build.zip', archive: false, dir: 'build'
+                      archiveArtifacts artifacts: 'build.zip', fingerprint: true
+                }
+            }
+        } 
+
+    stage('Code inspection & quality gate') {
+      steps {
+        
+        dir("${APP_CONTEXT_ROOT}") {
+          echo "run code inspection & check quality gate..."
+          withSonarQubeEnv('ci-sonarqube') {
+            sh "npm run sonar"
+          }
+        } 
+        
+        timeout(time: 10, unit: 'MINUTES') {
+          //waitForQualityGate abortPipeline: true
+          script  {
+            def qg = waitForQualityGate()
+            if (qg.status != 'OK' && qg.status != 'WARN') {
+              error "Pipeline aborted due to quality gate failure: ${qg.status}"
+            }
+          }
+        }
+      }
+    }
+
+    stage('Docker image - create and push to ECR') {
+            steps {
+                sh "echo pushing image to ecr..."
+                script {
+                    dir("${APP_CONTEXT_ROOT}") {
+                      def build = docker.build("153294646920.dkr.ecr.us-east-1.amazonaws.com/front-end:${SPRINT_RELEASE_NUM}.0.${BUILD_NUMBER}", ".")
+                    }
+                    withDockerRegistry(credentialsId: 'ecr:us-east-1:Deepthi_ECR_Creds', toolName: 'DOCKER',
+                    url: 'https://153294646920.dkr.ecr.us-east-1.amazonaws.com/front-end') {
+                    docker.image("153294646920.dkr.ecr.us-east-1.amazonaws.com/front-end:${SPRINT_RELEASE_NUM}.0.${BUILD_NUMBER}").push()
+                    docker.image("153294646920.dkr.ecr.us-east-1.amazonaws.com/front-end:${SPRINT_RELEASE_NUM}.0.${BUILD_NUMBER}").push('latest')
+                    }
+                }
+            }
+        }
+  }
+  
+  post {
+    always {
+      // echo "removing docker test container..."
+      // sh "docker stop ${TEST_CONTAINER_NAME}"
+      echo "removing the workspace"
+      cleanWs()
+    }
+  }
+}

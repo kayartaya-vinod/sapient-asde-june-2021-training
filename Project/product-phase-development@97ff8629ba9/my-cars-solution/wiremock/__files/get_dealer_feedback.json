@@ -1,0 +1,117 @@
+{
+    "data": {
+        "content": [
+            {
+                "id": "ad456dyZop12",
+                "vehicleId": "dghkli89jbde4",
+                "userId": "fght67dnf12",
+                "review": "This is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice car",
+                "rating": 4
+            },
+            {
+                "id": "fg56788a23f",
+                "vehicleId": "dghkli89jbde4",
+                "userId": "fght67dnf14",
+                "review": "This is a good car",
+                "rating": 5
+            },
+            {
+                "id": "fg56788a23f",
+                "vehicleId": "dghkli89jbde4",
+                "userId": "fght67dnf14",
+                "review": "This is a good car",
+                "rating": 1
+            },
+            {
+                "id": "fg56788a23f",
+                "vehicleId": "dghkli89jbde4",
+                "userId": "fght67dnf14",
+                "review": "This is a good car",
+                "rating": 2
+            },
+            {
+                "id": "fg56788a23f",
+                "vehicleId": "dghkli89jbde4",
+                "userId": "fght67dnf14",
+                "review": "This is a good car",
+                "rating": 3
+            },
+            
+            {
+                "id": "fg56788a23f",
+                "vehicleId": "dghkli89jbde4",
+                "userId": "fght67dnf14",
+                "review": "This is a good car",
+                "rating": 0
+            },
+            {
+                "id": "ad456dyZop12",
+                "vehicleId": "dghkli89jbde4",
+                "userId": "fght67dnf12",
+                "review": "This is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice carThis is a nice car",
+                "rating": 4
+            },
+            {
+                "id": "fg56788a23f",
+                "vehicleId": "dghkli89jbde4",
+                "userId": "fght67dnf14",
+                "review": "This is a good car",
+                "rating": 5
+            },
+            {
+                "id": "fg56788a23f",
+                "vehicleId": "dghkli89jbde4",
+                "userId": "fght67dnf14",
+                "review": "This is a good car",
+                "rating": 1
+            },
+            {
+                "id": "fg56788a23f",
+                "vehicleId": "dghkli89jbde4",
+                "userId": "fght67dnf14",
+                "review": "This is a good car",
+                "rating": 2
+            },
+            {
+                "id": "fg56788a23f",
+                "vehicleId": "dghkli89jbde4",
+                "userId": "fght67dnf14",
+                "review": "This is a good car",
+                "rating": 3
+            },
+            {
+                "id": "fg56788a23f",
+                "vehicleId": "dghkli89jbde4",
+                "userId": "fght67dnf14",
+                "review": "This is a good car",
+                "rating": 0
+            }
+        ],
+        "pageable": {
+            "sort": {
+                "sorted": false,
+                "unsorted": true,
+                "empty": true
+            },
+            "offset": 0,
+            "pageSize": 12,
+            "pageNumber": 0,
+            "paged": true,
+            "unpaged": false
+        },
+        "last": true,
+        "totalPages": 2,
+        "totalElements": 12,
+        "size": 12,
+        "number": 0,
+        "sort": {
+            "sorted": false,
+            "unsorted": true,
+            "empty": true
+        },
+        "first": true,
+        "numberOfElements": 0,
+        "empty": true
+    },
+    "success": true
+}

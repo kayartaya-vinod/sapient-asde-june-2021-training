@@ -1,0 +1,12 @@
+{
+    "request":{
+        "method": "GET",
+        "url":"/api/vehicles/sponsored"
+    },
+    "response": {
+        "status": 201,
+        "bodyFileName": "../__files/get_sponsor_vehicle.json"
+    }
+}
+
+
